@@ -1,0 +1,141 @@
+Pour le lancement de la base RH
+set oracle_sid=RH
+sqlplus sys/opens as sysdba
+startup force
+desc dict
+
+start C:\oracle\product\10.2.0\db_1\RDBMS\ADMIN/catproc.sql
+
+
+B0R- create user opens identified by opens;
+     grant connect, resource, dba to opens identified by opens;
+
+B1R- create tablespace tsrh  datafile 'c:\PROJET\data01.dbf ' size 3M;
+
+B2R- alter user opens default tablespace tsrh;
+
+C1R- connect opens/opens
+
+C2R- 
+create table emp(
+empid   number(3),
+nom     varchar2(20),
+prenom  varchar2(30),
+dept     varchar2(20),
+salaire     varchar2(20)
+);
+
+Creons une procedure metenom pour ajouter les noms dans la table inscription
+create sequence compter start with 1 increment by 1;
+
+C3R-
+create or replace PROCEDURE ajouemp 
+(
+  v_nom    VARCHAR2, 
+  v_prenom VARCHAR2,
+  v_dept VARCHAR2,
+  v_salaire VARCHAR2
+) 
+  IS
+BEGIN
+  INSERT INTO emp VALUES (compter.NEXTVAL, v_nom, v_prenom, v_dept, v_salaire);
+COMMIT ;
+END;
+/
+
+
+
+C3R-execute ajouemp('Adolphe','Weekend-Dolphe','ADM','20 000')
+    execute ajouemp('Alcindor','Losthelven','SEC','10 000')
+
+    execute ajouemp('Alexis','Jean Gariel','STO','5000')
+    execute ajouemp('Andou','Emmanuel','ADM','10000')
+    execute ajouemp('Augustin','Anchise','MGR','50000')
+    execute ajouemp('Beliscar','Fabiola','SEC','7000')
+
+    execute ajouemp('Bien-Aimable','David','MGR','60000')
+    execute ajouemp('Bien-Aime','Audisson','STO','4500')
+    execute ajouemp('Charles','Herby','GAR','3000')
+    execute ajouemp('David','Ricardo','ADM','12000')
+
+    execute ajouemp('Denis','Pierre Richard','ADM','13000')
+    execute ajouemp('Dervis','Youbenta','SEC','8000')
+    execute ajouemp('Dorvelus','Wilker','STO','4500')
+    execute ajouemp('Dumai','Pierre Winzor Dingo','Gar','3000')
+
+    execute ajouemp('Fenelon','Darline','SEC','7000')
+    execute ajouemp('Hippolyte','Jean-Rolner','ADM','17000')
+    execute ajouemp('Janvier','Rose Darline','STO','4000')
+    execute ajouemp('Jean','Eddy','GAR','3800')
+
+    execute ajouemp('Joseph','Jackson Serge','MGR','60000')
+    execute ajouemp('Joseph','Francois','MGR','65000')
+    execute ajouemp('Justin','Macelo','ADM','20000')
+    execute ajouemp('Louis','John-Merlin','SEC','7000');
+
+Dans une procedure stockée rechsal, afficher le salaire de l’employé Adolphe par ex..(avec son code=1)
+
+CREATE OR REPLACE FUNCTION rechsal (pempid number)
+RETURN float 
+IS rechsal float;
+BEGIN
+SELECT salaire INTO rechsal FROM EMP where empid =pempid;
+RETURN rechsal;
+END;
+/
+
+SELECT rechsal('10') FROM dual; 
+
+D-	En utilisant les Curseurs, ecrire une procedure permant d’afficher les salaires de tous les employes au Departement ADM
+DECLARE
+  CURSOR saltousemp IS
+   SELECT * FROM emp
+   WHERE dept = 'ADM';
+  sal_tous_emp emp%ROWTYPE;
+BEGIN
+  OPEN saltousemp;
+  LOOP
+    FETCH saltousemp INTO sal_tous_emp;
+    DBMS_OUTPUT.PUT_LINE(sal_tous_emp.salaire);
+    EXIT WHEN saltousemp%NOTFOUND;
+   END LOOP;
+  CLOSE saltousemp;
+END;
+/
+
+Partie II
+Create user paul identified by pass;
+Grant connect,resource,dba to paul;
+
+
+create database link ressource connect to OPENS identified by opens using 
+'(DESCRIPTION=
+(ADDRESS_LIST=
+(ADDRESS=(PROTOCOL=TCP)(HOST=192.168.1.122)(PORT=1521))
+)
+(CONNECT_DATA=
+(SID=RH)
+(SERVER=DEDICATED)
+)
+)'
+;
+
+
+Create public synonym Emp for OPENS.emp@ressource;
+
+ Insert into opens.Emp@ressource values
+   (compter.nextval@ressource,'Jean','Alexis','MGR',90000);
+
+Drop public database link ressource;
+
+select *from opens.emp@ressource;
+
+select *from dba_db_links;
+select owner,db_link,username from dba_db_links;
+
+set serveroutput on;
+
+select file_name, tablespace_name, bytes, file_id from dba_data_files;
+
+
+

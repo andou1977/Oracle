@@ -1,0 +1,1006 @@
+Dump file c:\oracle\product\10.2.0\admin\payroll\bdump\alert_payroll.log
+Mon Oct 16 10:00:10 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1532M/3992M, Ph+PgF:1411M/7931M, VA:3973M/4095M
+Mon Oct 16 10:00:10 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Shared memory segment for instance monitoring created
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  nls_language             = FRENCH
+  nls_territory            = FRANCE
+  sga_target               = 1224736768
+  control_files            = C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL01.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL02.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=PAYROLLXDB)
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\CDUMP
+  db_name                  = PAYROLL
+  open_cursors             = 300
+  pga_aggregate_target     = 407896064
+PMON started with pid=2, OS id=5312
+PSP0 started with pid=3, OS id=4740
+MMAN started with pid=4, OS id=3388
+DBW0 started with pid=5, OS id=1156
+LGWR started with pid=6, OS id=1836
+CKPT started with pid=7, OS id=5008
+SMON started with pid=8, OS id=4904
+RECO started with pid=9, OS id=3152
+CJQ0 started with pid=10, OS id=2876
+MMON started with pid=11, OS id=5584
+Mon Oct 16 10:00:11 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=12, OS id=932
+Mon Oct 16 10:00:11 2017
+starting up 1 shared server(s) ...
+Mon Oct 16 10:00:12 2017
+The input backup piece C:\ORACLE\PRODUCT\10.2.0\DB_2\ASSISTANTS\DBCA\TEMPLATES\SEED_DATABASE.DFB is in compressed format.
+Full restore complete of datafile 4 to datafile copy C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\USERS01.DBF.  Elapsed time: 0:00:01 
+  checkpoint is 521802
+Full restore complete of datafile 2 to datafile copy C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\UNDOTBS01.DBF.  Elapsed time: 0:00:01 
+  checkpoint is 521802
+Mon Oct 16 10:00:40 2017
+Full restore complete of datafile 3 to datafile copy C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\SYSAUX01.DBF.  Elapsed time: 0:00:28 
+  checkpoint is 521802
+  last deallocation scn is 521589
+Mon Oct 16 10:00:59 2017
+Full restore complete of datafile 1 to datafile copy C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\SYSTEM01.DBF.  Elapsed time: 0:00:47 
+  checkpoint is 521802
+  last deallocation scn is 515202
+Mon Oct 16 10:01:00 2017
+Create controlfile reuse set database "PAYROLL"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\oracle\product\10.2.0\oradata\PAYROLL\SYSTEM01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\UNDOTBS01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\SYSAUX01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo03.log') SIZE 51200K RESETLOGS
+WARNING: Default Temporary Tablespace not specified in CREATE DATABASE command
+Default Temporary Tablespace will be necessary for a locally managed database in future release
+Setting recovery target incarnation to 1
+Mon Oct 16 10:01:01 2017
+Successful mount of redo thread 1, with mount id 1814341852
+Mon Oct 16 10:01:01 2017
+Completed: Create controlfile reuse set database "PAYROLL"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\oracle\product\10.2.0\oradata\PAYROLL\SYSTEM01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\UNDOTBS01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\SYSAUX01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo03.log') SIZE 51200K RESETLOGS
+Shutting down instance: further logons disabled
+Mon Oct 16 10:01:02 2017
+Stopping background process CJQ0
+Mon Oct 16 10:01:03 2017
+Stopping background process MMNL
+Mon Oct 16 10:01:04 2017
+Stopping background process MMON
+Mon Oct 16 10:01:05 2017
+Shutting down instance (immediate)
+License high water mark = 1
+Mon Oct 16 10:01:05 2017
+Stopping Job queue slave processes
+Mon Oct 16 10:01:05 2017
+Job queue slave processes stopped
+Waiting for dispatcher 'D000' to shutdown
+All dispatchers and shared servers shutdown
+Mon Oct 16 10:01:07 2017
+ALTER DATABASE CLOSE NORMAL
+ORA-1109 signalled during: ALTER DATABASE CLOSE NORMAL...
+Mon Oct 16 10:01:07 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Mon Oct 16 10:01:10 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  nls_language             = FRENCH
+  nls_territory            = FRANCE
+  sga_target               = 1224736768
+  control_files            = C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL01.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL02.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  _no_recovery_through_resetlogs= TRUE
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=PAYROLLXDB)
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\CDUMP
+  db_name                  = PAYROLL
+  open_cursors             = 300
+  pga_aggregate_target     = 407896064
+PMON started with pid=2, OS id=4192
+PSP0 started with pid=3, OS id=6020
+MMAN started with pid=4, OS id=4436
+DBW0 started with pid=5, OS id=2788
+LGWR started with pid=6, OS id=2032
+CKPT started with pid=7, OS id=428
+SMON started with pid=8, OS id=5032
+RECO started with pid=9, OS id=5900
+MMON started with pid=10, OS id=3592
+Mon Oct 16 10:01:10 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=11, OS id=1872
+Mon Oct 16 10:01:10 2017
+starting up 1 shared server(s) ...
+Mon Oct 16 10:01:11 2017
+Create controlfile reuse set database "PAYROLL"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\oracle\product\10.2.0\oradata\PAYROLL\SYSTEM01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\UNDOTBS01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\SYSAUX01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo03.log') SIZE 51200K RESETLOGS
+Mon Oct 16 10:01:11 2017
+WARNING: Default Temporary Tablespace not specified in CREATE DATABASE command
+Default Temporary Tablespace will be necessary for a locally managed database in future release
+Setting recovery target incarnation to 1
+Mon Oct 16 10:01:12 2017
+Successful mount of redo thread 1, with mount id 1814356455
+Mon Oct 16 10:01:12 2017
+Completed: Create controlfile reuse set database "PAYROLL"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\oracle\product\10.2.0\oradata\PAYROLL\SYSTEM01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\UNDOTBS01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\SYSAUX01.DBF',
+'C:\oracle\product\10.2.0\oradata\PAYROLL\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\oracle\product\10.2.0\oradata\PAYROLL\redo03.log') SIZE 51200K RESETLOGS
+Mon Oct 16 10:01:12 2017
+Stopping background process MMNL
+Mon Oct 16 10:01:13 2017
+Stopping background process MMON
+Starting background process MMON
+Starting background process MMNL
+MMON started with pid=10, OS id=3108
+Mon Oct 16 10:01:14 2017
+ALTER SYSTEM enable restricted session;
+Mon Oct 16 10:01:14 2017
+alter database "PAYROLL" open resetlogs
+Mon Oct 16 10:01:14 2017
+RESETLOGS after incomplete recovery UNTIL CHANGE 521802
+Mon Oct 16 10:01:14 2017
+Errors in file c:\oracle\product\10.2.0\admin\payroll\udump\payroll_ora_4032.trc:
+ORA-00313: echec d'ouverture des membres du groupe de journaux 1, thread 1
+ORA-00312: journal en ligne 1 thread 1 : 'C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO01.LOG'
+ORA-27041: ouverture du fichier impossible
+OSD-04002: ouverture impossible du fichier
+O/S-Error: (OS 2) Le fichier spécifié est introuvable.
+
+Mon Oct 16 10:01:15 2017
+Errors in file c:\oracle\product\10.2.0\admin\payroll\udump\payroll_ora_4032.trc:
+ORA-00313: echec d'ouverture des membres du groupe de journaux 2, thread 1
+ORA-00312: journal en ligne 2 thread 1 : 'C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO02.LOG'
+ORA-27041: ouverture du fichier impossible
+OSD-04002: ouverture impossible du fichier
+O/S-Error: (OS 2) Le fichier spécifié est introuvable.
+
+MMNL started with pid=11, OS id=1908
+Mon Oct 16 10:01:16 2017
+Errors in file c:\oracle\product\10.2.0\admin\payroll\udump\payroll_ora_4032.trc:
+ORA-00313: echec d'ouverture des membres du groupe de journaux 3, thread 1
+ORA-00312: journal en ligne 3 thread 1 : 'C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO03.LOG'
+ORA-27041: ouverture du fichier impossible
+OSD-04002: ouverture impossible du fichier
+O/S-Error: (OS 2) Le fichier spécifié est introuvable.
+
+Mon Oct 16 10:01:17 2017
+Setting recovery target incarnation to 2
+Mon Oct 16 10:01:18 2017
+Assigning activation ID 1814356455 (0x6c24e1e7)
+Thread 1 opened at log sequence 1
+  Current log# 3 seq# 1 mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO03.LOG
+Successful open of redo thread 1
+Mon Oct 16 10:01:18 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Mon Oct 16 10:01:18 2017
+SMON: enabling cache recovery
+Mon Oct 16 10:01:19 2017
+Successfully onlined Undo Tablespace 1.
+Dictionary check beginning
+Tablespace 'TEMP' #3 found in data dictionary,
+but not in the controlfile. Adding to controlfile.
+Dictionary check complete
+Mon Oct 16 10:01:19 2017
+SMON: enabling tx recovery
+Mon Oct 16 10:01:19 2017
+*********************************************************************
+WARNING: The following temporary tablespaces contain no files.
+         This condition can occur when a backup controlfile has
+         been restored.  It may be necessary to add files to these
+         tablespaces.  That can be done using the SQL statement:
+ 
+         ALTER TABLESPACE <tablespace_name> ADD TEMPFILE
+ 
+         Alternatively, if these temporary tablespaces are no longer
+         needed, then they can be dropped.
+           Empty temporary tablespace: TEMP
+*********************************************************************
+Database Characterset is US7ASCII
+Threshold validation cannot be done before catproc is loaded.
+Threshold validation cannot be done before catproc is loaded.
+**********************************************************
+WARNING: Files may exists in db_recovery_file_dest
+that are not known to the database. Use the RMAN command
+CATALOG RECOVERY AREA to re-catalog any such files.
+One of the following events caused this:
+1. A backup controlfile was restored.
+2. A standby controlfile was restored.
+3. The controlfile was re-created.
+4. db_recovery_file_dest had previously been enabled and
+   then disabled.
+**********************************************************
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=15, OS id=4948
+Mon Oct 16 10:01:23 2017
+LOGSTDBY: Validating controlfile with logical metadata
+Mon Oct 16 10:01:23 2017
+LOGSTDBY: Validation complete
+Global Name changed to PAYROLL
+Completed: alter database "PAYROLL" open resetlogs
+Mon Oct 16 10:01:26 2017
+alter database rename global_name to "PAYROLL"
+Completed: alter database rename global_name to "PAYROLL"
+Mon Oct 16 10:01:26 2017
+ALTER TABLESPACE TEMP ADD TEMPFILE 'C:\oracle\product\10.2.0\oradata\PAYROLL\TEMP01.DBF' SIZE 20480K REUSE AUTOEXTEND ON NEXT 640K MAXSIZE UNLIMITED
+Completed: ALTER TABLESPACE TEMP ADD TEMPFILE 'C:\oracle\product\10.2.0\oradata\PAYROLL\TEMP01.DBF' SIZE 20480K REUSE AUTOEXTEND ON NEXT 640K MAXSIZE UNLIMITED
+Mon Oct 16 10:01:27 2017
+ALTER DATABASE DEFAULT TABLESPACE "USERS"
+Completed: ALTER DATABASE DEFAULT TABLESPACE "USERS"
+Mon Oct 16 10:01:30 2017
+ALTER SYSTEM disable restricted session;
+Mon Oct 16 10:01:30 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Mon Oct 16 10:01:33 2017
+Starting background process CJQ0
+CJQ0 started with pid=17, OS id=2148
+Mon Oct 16 10:01:33 2017
+The input backup piece C:\ORACLE\PRODUCT\10.2.0\DB_2\ASSISTANTS\DBCA\TEMPLATES\EXAMPLE01.DFB is in compressed format.
+Full restore complete of datafile 5 to datafile copy C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\EXAMPLE01.DBF.  Elapsed time: 0:00:08 
+  checkpoint is 538903
+  last deallocation scn is 538486
+Mon Oct 16 10:01:43 2017
+Plug in tablespace EXAMPLE with datafile
+  'C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\EXAMPLE01.DBF'
+Mon Oct 16 10:02:12 2017
+ALTER TABLESPACE example READ WRITE
+Mon Oct 16 10:02:12 2017
+Completed: ALTER TABLESPACE example READ WRITE
+Mon Oct 16 10:02:55 2017
+Starting background process EMN0
+EMN0 started with pid=19, OS id=5040
+Mon Oct 16 10:02:55 2017
+Shutting down instance: further logons disabled
+Mon Oct 16 10:02:58 2017
+Stopping background process QMNC
+Mon Oct 16 10:02:59 2017
+Stopping background process CJQ0
+Mon Oct 16 10:03:00 2017
+Stopping background process MMNL
+Mon Oct 16 10:03:01 2017
+Stopping background process MMON
+Mon Oct 16 10:03:02 2017
+Shutting down instance (immediate)
+License high water mark = 5
+All dispatchers and shared servers shutdown
+Mon Oct 16 10:03:09 2017
+ALTER DATABASE CLOSE NORMAL
+Mon Oct 16 10:03:09 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Mon Oct 16 10:03:10 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 1
+Successful close of redo thread 1
+Mon Oct 16 10:03:10 2017
+Completed: ALTER DATABASE CLOSE NORMAL
+Mon Oct 16 10:03:10 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Mon Oct 16 10:03:14 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  nls_language             = FRENCH
+  nls_territory            = FRANCE
+  sga_target               = 1224736768
+  control_files            = C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL01.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL02.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  _no_recovery_through_resetlogs= TRUE
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=PAYROLLXDB)
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\CDUMP
+  db_name                  = PAYROLL
+  open_cursors             = 300
+  pga_aggregate_target     = 407896064
+PMON started with pid=2, OS id=4936
+PSP0 started with pid=3, OS id=3856
+MMAN started with pid=4, OS id=2636
+DBW0 started with pid=5, OS id=5640
+LGWR started with pid=6, OS id=4116
+CKPT started with pid=7, OS id=3132
+SMON started with pid=8, OS id=3740
+RECO started with pid=9, OS id=4332
+MMON started with pid=10, OS id=5012
+Mon Oct 16 10:03:14 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=11, OS id=3204
+Mon Oct 16 10:03:14 2017
+starting up 1 shared server(s) ...
+Mon Oct 16 10:03:15 2017
+ALTER DATABASE   MOUNT
+Mon Oct 16 10:03:19 2017
+Setting recovery target incarnation to 2
+Mon Oct 16 10:03:19 2017
+Successful mount of redo thread 1, with mount id 1814372195
+Mon Oct 16 10:03:19 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Mon Oct 16 10:03:20 2017
+ALTER DATABASE OPEN
+Mon Oct 16 10:03:20 2017
+Thread 1 opened at log sequence 1
+  Current log# 3 seq# 1 mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO03.LOG
+Successful open of redo thread 1
+Mon Oct 16 10:03:20 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Mon Oct 16 10:03:20 2017
+SMON: enabling cache recovery
+Mon Oct 16 10:03:22 2017
+Successfully onlined Undo Tablespace 1.
+Mon Oct 16 10:03:22 2017
+SMON: enabling tx recovery
+Mon Oct 16 10:03:22 2017
+Database Characterset is US7ASCII
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=15, OS id=3892
+Mon Oct 16 10:03:27 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Mon Oct 16 10:03:28 2017
+Completed: ALTER DATABASE OPEN
+Mon Oct 16 10:03:28 2017
+Stopping background process MMNL
+Mon Oct 16 10:03:29 2017
+Stopping background process MMON
+Starting background process MMON
+Starting background process MMNL
+MMON started with pid=10, OS id=5256
+Mon Oct 16 10:03:30 2017
+ALTER SYSTEM enable restricted session;
+Mon Oct 16 10:03:30 2017
+alter database character set INTERNAL_CONVERT WE8MSWIN1252
+MMNL started with pid=11, OS id=5144
+Mon Oct 16 10:03:37 2017
+Thread 1 advanced to log sequence 2
+  Current log# 1 seq# 2 mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO01.LOG
+Mon Oct 16 10:03:41 2017
+Updating character set in controlfile to WE8MSWIN1252
+Synchronizing connection with database character set information
+Refreshing type attributes with new character set information
+Completed: alter database character set INTERNAL_CONVERT WE8MSWIN1252
+Mon Oct 16 10:03:44 2017
+alter database national character set INTERNAL_CONVERT UTF8
+Completed: alter database national character set INTERNAL_CONVERT UTF8
+Mon Oct 16 10:03:47 2017
+ALTER SYSTEM disable restricted session;
+Mon Oct 16 10:03:48 2017
+Starting background process CJQ0
+CJQ0 started with pid=14, OS id=3952
+Mon Oct 16 10:04:02 2017
+Starting background process EMN0
+EMN0 started with pid=18, OS id=1516
+Mon Oct 16 10:04:02 2017
+Shutting down instance: further logons disabled
+Mon Oct 16 10:04:08 2017
+Stopping background process QMNC
+Mon Oct 16 10:04:09 2017
+Stopping background process CJQ0
+Mon Oct 16 10:04:10 2017
+Stopping background process MMNL
+Mon Oct 16 10:04:11 2017
+Stopping background process MMON
+Mon Oct 16 10:04:12 2017
+Shutting down instance (immediate)
+License high water mark = 1
+All dispatchers and shared servers shutdown
+Mon Oct 16 10:04:19 2017
+ALTER DATABASE CLOSE NORMAL
+Mon Oct 16 10:04:19 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Mon Oct 16 10:04:20 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 2
+Successful close of redo thread 1
+Mon Oct 16 10:04:20 2017
+Completed: ALTER DATABASE CLOSE NORMAL
+Mon Oct 16 10:04:20 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Mon Oct 16 10:04:23 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  nls_language             = FRENCH
+  nls_territory            = FRANCE
+  sga_target               = 1224736768
+  control_files            = C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL01.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL02.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=PAYROLLXDB)
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\CDUMP
+  db_name                  = PAYROLL
+  open_cursors             = 300
+  pga_aggregate_target     = 407896064
+PMON started with pid=2, OS id=2912
+PSP0 started with pid=3, OS id=4308
+MMAN started with pid=4, OS id=3288
+DBW0 started with pid=5, OS id=5756
+LGWR started with pid=6, OS id=3692
+CKPT started with pid=7, OS id=4668
+SMON started with pid=8, OS id=5160
+RECO started with pid=9, OS id=5960
+CJQ0 started with pid=10, OS id=3720
+MMON started with pid=11, OS id=3532
+Mon Oct 16 10:04:23 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=12, OS id=5968
+Mon Oct 16 10:04:23 2017
+starting up 1 shared server(s) ...
+Mon Oct 16 10:04:24 2017
+ALTER DATABASE   MOUNT
+Mon Oct 16 10:04:29 2017
+Setting recovery target incarnation to 2
+Mon Oct 16 10:04:29 2017
+Successful mount of redo thread 1, with mount id 1814327720
+Mon Oct 16 10:04:29 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Mon Oct 16 10:04:30 2017
+ALTER DATABASE OPEN
+Mon Oct 16 10:04:30 2017
+Thread 1 opened at log sequence 2
+  Current log# 1 seq# 2 mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO01.LOG
+Successful open of redo thread 1
+Mon Oct 16 10:04:30 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Mon Oct 16 10:04:30 2017
+SMON: enabling cache recovery
+Mon Oct 16 10:04:31 2017
+Successfully onlined Undo Tablespace 1.
+Mon Oct 16 10:04:31 2017
+SMON: enabling tx recovery
+Mon Oct 16 10:04:31 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=16, OS id=1884
+Mon Oct 16 10:04:36 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Mon Oct 16 10:04:37 2017
+Completed: ALTER DATABASE OPEN
+SERVER COMPONENT id=CPU_BGN: timestamp=2017-10-16 10:05:42
+Mon Oct 16 10:05:49 2017
+Thread 1 advanced to log sequence 3
+  Current log# 2 seq# 3 mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO02.LOG
+Mon Oct 16 10:05:55 2017
+SERVER COMPONENT id=CATPROC: timestamp=2017-10-16 10:05:55
+Mon Oct 16 10:06:37 2017
+Thread 1 advanced to log sequence 4
+  Current log# 3 seq# 4 mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO03.LOG
+Mon Oct 16 10:09:39 2017
+Thread 1 advanced to log sequence 5
+  Current log# 1 seq# 5 mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO01.LOG
+Mon Oct 16 10:10:25 2017
+SERVER ACTION=CPU id=5923165: Patch2Vista
+SERVER COMPONENT id=CPU_END: timestamp=2017-10-16 10:10:25
+SERVER COMPONENT id=UTLRP_BGN: timestamp=2017-10-16 10:10:27
+SERVER COMPONENT id=UTLRP_END: timestamp=2017-10-16 10:10:34
+Dump file c:\oracle\product\10.2.0\admin\payroll\bdump\alert_payroll.log
+Mon Oct 16 11:03:43 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2953M/3992M, Ph+PgF:6233M/7320M, VA:3973M/4095M
+Mon Oct 16 11:03:43 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 285212672
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  nls_language             = FRENCH
+  nls_territory            = FRANCE
+  sga_target               = 1224736768
+  control_files            = C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL01.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL02.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 897581056
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=PAYROLLXDB)
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\CDUMP
+  db_name                  = PAYROLL
+  open_cursors             = 300
+  pga_aggregate_target     = 407896064
+PMON started with pid=2, OS id=2424
+PSP0 started with pid=3, OS id=2144
+MMAN started with pid=4, OS id=2032
+DBW0 started with pid=5, OS id=2576
+LGWR started with pid=6, OS id=2008
+CKPT started with pid=7, OS id=2408
+SMON started with pid=8, OS id=2396
+RECO started with pid=9, OS id=2012
+CJQ0 started with pid=10, OS id=2716
+MMON started with pid=11, OS id=2688
+MMNL started with pid=12, OS id=3008
+Mon Oct 16 11:03:49 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+Mon Oct 16 11:03:53 2017
+alter database mount exclusive
+Mon Oct 16 11:03:58 2017
+Setting recovery target incarnation to 2
+Mon Oct 16 11:03:58 2017
+Successful mount of redo thread 1, with mount id 1814329497
+Mon Oct 16 11:03:58 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Mon Oct 16 11:03:58 2017
+alter database open
+Mon Oct 16 11:04:03 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Mon Oct 16 11:04:13 2017
+Started redo scan
+Mon Oct 16 11:04:16 2017
+Completed redo scan
+ 8266 redo blocks read, 849 data blocks need recovery
+Mon Oct 16 11:04:17 2017
+Started redo application at
+ Thread 1: logseq 5, block 29487
+Mon Oct 16 11:04:18 2017
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 5 Reading mem 0
+  Mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO01.LOG
+Mon Oct 16 11:04:20 2017
+Completed redo application
+Mon Oct 16 11:04:20 2017
+Completed crash recovery at
+ Thread 1: logseq 5, block 37753, scn 619191
+ 849 data blocks read, 849 data blocks written, 8266 redo blocks read
+Mon Oct 16 11:04:34 2017
+Thread 1 advanced to log sequence 6
+Thread 1 opened at log sequence 6
+  Current log# 2 seq# 6 mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO02.LOG
+Successful open of redo thread 1
+Mon Oct 16 11:04:35 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Mon Oct 16 11:04:35 2017
+SMON: enabling cache recovery
+Mon Oct 16 11:05:05 2017
+Successfully onlined Undo Tablespace 1.
+Mon Oct 16 11:05:05 2017
+SMON: enabling tx recovery
+Mon Oct 16 11:05:07 2017
+Database Characterset is WE8MSWIN1252
+Mon Oct 16 11:05:18 2017
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=18, OS id=4120
+Mon Oct 16 11:06:50 2017
+Completed: alter database open
+Mon Oct 16 11:06:55 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Mon Oct 16 11:12:53 2017
+Shutting down instance (abort)
+License high water mark = 15
+Instance terminated by USER, pid = 6064
+Mon Oct 16 11:12:57 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 285212672
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  nls_language             = FRENCH
+  nls_territory            = FRANCE
+  sga_target               = 1224736768
+  control_files            = C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL01.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL02.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 897581056
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=PAYROLLXDB)
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\CDUMP
+  db_name                  = PAYROLL
+  open_cursors             = 300
+  pga_aggregate_target     = 407896064
+PMON started with pid=2, OS id=5552
+PSP0 started with pid=3, OS id=6348
+MMAN started with pid=4, OS id=6316
+DBW0 started with pid=5, OS id=6320
+LGWR started with pid=6, OS id=5564
+CKPT started with pid=7, OS id=6308
+SMON started with pid=8, OS id=5504
+RECO started with pid=9, OS id=5680
+CJQ0 started with pid=10, OS id=6356
+MMON started with pid=11, OS id=1580
+Mon Oct 16 11:12:57 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=12, OS id=6376
+Mon Oct 16 11:12:57 2017
+starting up 1 shared server(s) ...
+Mon Oct 16 11:12:58 2017
+ALTER DATABASE   MOUNT
+Mon Oct 16 11:13:02 2017
+Setting recovery target incarnation to 2
+Mon Oct 16 11:13:02 2017
+Successful mount of redo thread 1, with mount id 1814332346
+Mon Oct 16 11:13:02 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Mon Oct 16 11:13:03 2017
+ALTER DATABASE OPEN
+Mon Oct 16 11:13:04 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Mon Oct 16 11:13:04 2017
+Started redo scan
+Mon Oct 16 11:13:04 2017
+Completed redo scan
+ 6738 redo blocks read, 428 data blocks need recovery
+Mon Oct 16 11:13:05 2017
+Started redo application at
+ Thread 1: logseq 6, block 433
+Mon Oct 16 11:13:05 2017
+Recovery of Online Redo Log: Thread 1 Group 2 Seq 6 Reading mem 0
+  Mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO02.LOG
+Mon Oct 16 11:13:06 2017
+Completed redo application
+Mon Oct 16 11:13:06 2017
+Completed crash recovery at
+ Thread 1: logseq 6, block 7171, scn 641135
+ 428 data blocks read, 428 data blocks written, 6738 redo blocks read
+Mon Oct 16 11:13:09 2017
+Thread 1 advanced to log sequence 7
+Thread 1 opened at log sequence 7
+  Current log# 3 seq# 7 mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO03.LOG
+Successful open of redo thread 1
+Mon Oct 16 11:13:09 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Mon Oct 16 11:13:09 2017
+SMON: enabling cache recovery
+Mon Oct 16 11:13:11 2017
+Successfully onlined Undo Tablespace 1.
+Mon Oct 16 11:13:11 2017
+SMON: enabling tx recovery
+Mon Oct 16 11:13:11 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=18, OS id=5756
+Mon Oct 16 11:13:25 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Mon Oct 16 11:13:26 2017
+Completed: ALTER DATABASE OPEN
+Mon Oct 16 11:16:16 2017
+Shutting down instance (abort)
+License high water mark = 8
+Instance terminated by USER, pid = 5872
+Mon Oct 16 11:16:20 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 285212672
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  nls_language             = FRENCH
+  nls_territory            = FRANCE
+  sga_target               = 1224736768
+  control_files            = C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL01.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL02.CTL, C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 897581056
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=PAYROLLXDB)
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\PAYROLL\CDUMP
+  db_name                  = PAYROLL
+  open_cursors             = 300
+  pga_aggregate_target     = 407896064
+PMON started with pid=2, OS id=5448
+PSP0 started with pid=3, OS id=6640
+MMAN started with pid=4, OS id=4988
+DBW0 started with pid=5, OS id=6324
+LGWR started with pid=6, OS id=3800
+CKPT started with pid=7, OS id=4884
+SMON started with pid=8, OS id=4500
+RECO started with pid=9, OS id=92
+CJQ0 started with pid=10, OS id=188
+MMON started with pid=11, OS id=160
+Mon Oct 16 11:16:20 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=12, OS id=192
+Mon Oct 16 11:16:20 2017
+starting up 1 shared server(s) ...
+Mon Oct 16 11:16:21 2017
+ALTER DATABASE   MOUNT
+Mon Oct 16 11:16:25 2017
+Setting recovery target incarnation to 2
+Mon Oct 16 11:16:25 2017
+Successful mount of redo thread 1, with mount id 1814345861
+Mon Oct 16 11:16:25 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Mon Oct 16 11:16:26 2017
+ALTER DATABASE OPEN
+Mon Oct 16 11:16:27 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Mon Oct 16 11:16:27 2017
+Started redo scan
+Mon Oct 16 11:16:28 2017
+Completed redo scan
+ 435 redo blocks read, 122 data blocks need recovery
+Mon Oct 16 11:16:28 2017
+Started redo application at
+ Thread 1: logseq 7, block 3
+Mon Oct 16 11:16:28 2017
+Recovery of Online Redo Log: Thread 1 Group 3 Seq 7 Reading mem 0
+  Mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO03.LOG
+Mon Oct 16 11:16:28 2017
+Completed redo application
+Mon Oct 16 11:16:29 2017
+Completed crash recovery at
+ Thread 1: logseq 7, block 438, scn 661539
+ 122 data blocks read, 122 data blocks written, 435 redo blocks read
+Mon Oct 16 11:16:30 2017
+Thread 1 advanced to log sequence 8
+Thread 1 opened at log sequence 8
+  Current log# 1 seq# 8 mem# 0: C:\ORACLE\PRODUCT\10.2.0\ORADATA\PAYROLL\REDO01.LOG
+Successful open of redo thread 1
+Mon Oct 16 11:16:30 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Mon Oct 16 11:16:30 2017
+SMON: enabling cache recovery
+Mon Oct 16 11:16:32 2017
+Successfully onlined Undo Tablespace 1.
+Mon Oct 16 11:16:32 2017
+SMON: enabling tx recovery
+Mon Oct 16 11:16:33 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=18, OS id=752
+Mon Oct 16 11:16:39 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Mon Oct 16 11:16:39 2017
+Completed: ALTER DATABASE OPEN

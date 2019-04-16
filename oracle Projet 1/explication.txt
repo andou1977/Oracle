@@ -1,0 +1,83 @@
+
+// 2eme partie du projet 
+ona pass
+dgi pass1
+
+les deux users doit etre creer a l'interieur de dgi
+1-on cree les deux bases etant qu'administrateur et ensuite
+on cree un user
+create user caisse identified by pass password expire;
+on attribue des privileges
+grant connect, resource, dba to caisse identified by pass;
+on connect dans ce user
+connect caisse/pass
+apres on ajoute une table
+
+create table citoyen(
+  Noidentite NUMBER(10) NOT NULL ,
+  nom varchar2(20) NOT NULL,
+  prenom varchar2(20) NOT NULL,
+  Adresse varchar2(20) NOT NULL
+   );
+create sequence compter start with 1 increment by 1 ; 
+	
+
+Insert into citoyen values(compter.nextval,'Bastien','jacques','3 route de delmas');
+Insert into citoyen values(compter.nextval,'Andre','Martine','4 Rue Waag');
+Insert into citoyen values(compter.nextval,'Joseph','Paula','Turgeau 10');
+Insert into citoyen values(compter.nextval,'Osorie','O''Hara','Rue Petion 12');
+
+il faut deconnecter
+disconnect;
+apres il faut connecter etant que administrateur dans dgi
+connect sys/pass1 as sysdba;
+
+maintenant creons l'autre utilisateurs
+create user caisse2 identified by pass password expire;
+on attribue des privileges
+grant connect, resource, dba to caisse2 identified by pass;
+on connect dans ce user
+connect caisse2/pass
+apres on ajoute une table
+
+create table haitien(
+  Noidentite NUMBER(10) NOT NULL ,
+  nom varchar2(20) NOT NULL,
+  prenom varchar2(20) NOT NULL,
+  Adresse varchar2(20) NOT NULL
+   );
+create sequence compter start with 1 increment by 1 ; 
+	
+
+Insert into haitien values(compter.nextval,'alexis','jeanne','10 carrefour');
+Insert into haitien values(compter.nextval,'Andre','Martine','4 Rue Waag');
+Insert into haitien values(compter.nextval,'Joseph','Paula','Turgeau 10');
+Insert into haitien values(compter.nextval,'Osorie','O''Hara','Rue Petion 12');
+
+apres il faut deconnecter 
+disconnect
+
+apres il faut connecter etant que administrateur dans ona
+connect sys/pass as sysdba;
+
+apres on vas effectuer le link dans l'administration d'ona
+
+create public database link hgjh
+connect to
+ caisse
+identified by 
+pass
+using 'hgjh';
+
+li donner ladan yo(a regarder)
+
+select * from caisse.citoyen@hgjh;
+
+creer le synonyme
+CREATE public SYNONYM citoyen FOR caisse.citoyen;
+pour verifier le synonyme il suffit de faire
+select * from citoyen;
+
+apres on fait une insertion pour verifier
+Insert into citoyen values(compter.nextval,'Bastien','jacques','3 route de delmas');
+

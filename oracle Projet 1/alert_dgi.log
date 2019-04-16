@@ -1,0 +1,2150 @@
+Dump file c:\oracle\product\10.2.0\admin\dgi\bdump\alert_dgi.log
+Thu Jun 15 07:57:58 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:861M/3818M, Ph+PgF:654M/5674M, VA:3971M/4095M
+Thu Jun 15 07:57:58 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Shared memory segment for instance monitoring created
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=632
+PSP0 started with pid=3, OS id=6148
+MMAN started with pid=4, OS id=7128
+DBW0 started with pid=5, OS id=5004
+LGWR started with pid=6, OS id=6344
+CKPT started with pid=7, OS id=3240
+SMON started with pid=8, OS id=7000
+RECO started with pid=9, OS id=8076
+CJQ0 started with pid=10, OS id=5980
+MMON started with pid=11, OS id=2804
+Thu Jun 15 07:57:59 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 07:57:59 2017
+starting up 1 shared server(s) ...
+MMNL started with pid=12, OS id=6652
+Thu Jun 15 07:58:01 2017
+The input backup piece C:\ORACLE\PRODUCT\10.2.0\DB_5\ASSISTANTS\DBCA\TEMPLATES\SEED_DATABASE.DFB is in compressed format.
+Full restore complete of datafile 4 to datafile copy C:\DGI2017\DGI\USERS01.DBF.  Elapsed time: 0:00:02 
+  checkpoint is 521802
+Full restore complete of datafile 2 to datafile copy C:\DGI2017\DGI\UNDOTBS01.DBF.  Elapsed time: 0:00:04 
+  checkpoint is 521802
+Thu Jun 15 08:01:10 2017
+Full restore complete of datafile 3 to datafile copy C:\DGI2017\DGI\SYSAUX01.DBF.  Elapsed time: 0:03:08 
+  checkpoint is 521802
+  last deallocation scn is 521589
+Thu Jun 15 08:04:00 2017
+Full restore complete of datafile 1 to datafile copy C:\DGI2017\DGI\SYSTEM01.DBF.  Elapsed time: 0:05:59 
+  checkpoint is 521802
+  last deallocation scn is 515202
+Thu Jun 15 08:04:04 2017
+Create controlfile reuse set database "DGI"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\DGI2017\DGI\SYSTEM01.DBF',
+'C:\DGI2017\DGI\UNDOTBS01.DBF',
+'C:\DGI2017\DGI\SYSAUX01.DBF',
+'C:\DGI2017\DGI\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\DGI2017\DGI\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\DGI2017\DGI\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\DGI2017\DGI\redo03.log') SIZE 51200K RESETLOGS
+WARNING: Default Temporary Tablespace not specified in CREATE DATABASE command
+Default Temporary Tablespace will be necessary for a locally managed database in future release
+Thu Jun 15 08:04:15 2017
+Setting recovery target incarnation to 1
+Thu Jun 15 08:04:18 2017
+Successful mount of redo thread 1, with mount id 2102759732
+Thu Jun 15 08:04:18 2017
+Completed: Create controlfile reuse set database "DGI"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\DGI2017\DGI\SYSTEM01.DBF',
+'C:\DGI2017\DGI\UNDOTBS01.DBF',
+'C:\DGI2017\DGI\SYSAUX01.DBF',
+'C:\DGI2017\DGI\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\DGI2017\DGI\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\DGI2017\DGI\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\DGI2017\DGI\redo03.log') SIZE 51200K RESETLOGS
+Shutting down instance: further logons disabled
+Thu Jun 15 08:04:20 2017
+Stopping background process MMNL
+Thu Jun 15 08:04:21 2017
+Stopping background process CJQ0
+Thu Jun 15 08:04:22 2017
+Stopping background process MMON
+Thu Jun 15 08:04:22 2017
+Shutting down instance (immediate)
+License high water mark = 1
+Thu Jun 15 08:04:22 2017
+Stopping Job queue slave processes
+Thu Jun 15 08:04:22 2017
+Job queue slave processes stopped
+Waiting for dispatcher 'D000' to shutdown
+All dispatchers and shared servers shutdown
+Thu Jun 15 08:04:24 2017
+ALTER DATABASE CLOSE NORMAL
+ORA-1109 signalled during: ALTER DATABASE CLOSE NORMAL...
+Thu Jun 15 08:04:24 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thu Jun 15 08:04:27 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  _no_recovery_through_resetlogs= TRUE
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=6352
+PSP0 started with pid=3, OS id=6176
+MMAN started with pid=4, OS id=4928
+DBW0 started with pid=5, OS id=2980
+LGWR started with pid=6, OS id=5656
+CKPT started with pid=7, OS id=5216
+SMON started with pid=8, OS id=2228
+RECO started with pid=9, OS id=7508
+MMON started with pid=10, OS id=4616
+MMNL started with pid=11, OS id=7232
+Thu Jun 15 08:04:30 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+Thu Jun 15 08:04:32 2017
+Create controlfile reuse set database "DGI"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\DGI2017\DGI\SYSTEM01.DBF',
+'C:\DGI2017\DGI\UNDOTBS01.DBF',
+'C:\DGI2017\DGI\SYSAUX01.DBF',
+'C:\DGI2017\DGI\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\DGI2017\DGI\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\DGI2017\DGI\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\DGI2017\DGI\redo03.log') SIZE 51200K RESETLOGS
+Thu Jun 15 08:04:32 2017
+WARNING: Default Temporary Tablespace not specified in CREATE DATABASE command
+Default Temporary Tablespace will be necessary for a locally managed database in future release
+Setting recovery target incarnation to 1
+Thu Jun 15 08:04:41 2017
+Successful mount of redo thread 1, with mount id 2102753872
+Thu Jun 15 08:04:41 2017
+Completed: Create controlfile reuse set database "DGI"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\DGI2017\DGI\SYSTEM01.DBF',
+'C:\DGI2017\DGI\UNDOTBS01.DBF',
+'C:\DGI2017\DGI\SYSAUX01.DBF',
+'C:\DGI2017\DGI\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\DGI2017\DGI\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\DGI2017\DGI\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\DGI2017\DGI\redo03.log') SIZE 51200K RESETLOGS
+Thu Jun 15 08:04:41 2017
+Stopping background process MMNL
+Thu Jun 15 08:04:42 2017
+Stopping background process MMON
+Starting background process MMON
+MMON started with pid=10, OS id=5708
+Thu Jun 15 08:04:44 2017
+Starting background process MMNL
+Thu Jun 15 08:04:44 2017
+ALTER SYSTEM enable restricted session;
+Thu Jun 15 08:04:44 2017
+alter database "DGI" open resetlogs
+Thu Jun 15 08:04:44 2017
+RESETLOGS after incomplete recovery UNTIL CHANGE 521802
+Thu Jun 15 08:04:44 2017
+Errors in file c:\oracle\product\10.2.0\admin\dgi\udump\dgi_ora_8048.trc:
+ORA-00313: open failed for members of log group 1 of thread 1
+ORA-00312: online log 1 thread 1: 'C:\DGI2017\DGI\REDO01.LOG'
+ORA-27041: unable to open file
+OSD-04002: unable to open file
+O/S-Error: (OS 2) The system cannot find the file specified.
+
+MMNL started with pid=11, OS id=7456
+Thu Jun 15 08:04:45 2017
+Errors in file c:\oracle\product\10.2.0\admin\dgi\udump\dgi_ora_8048.trc:
+ORA-00313: open failed for members of log group 2 of thread 1
+ORA-00312: online log 2 thread 1: 'C:\DGI2017\DGI\REDO02.LOG'
+ORA-27041: unable to open file
+OSD-04002: unable to open file
+O/S-Error: (OS 2) The system cannot find the file specified.
+
+Thu Jun 15 08:04:47 2017
+Errors in file c:\oracle\product\10.2.0\admin\dgi\udump\dgi_ora_8048.trc:
+ORA-00313: open failed for members of log group 3 of thread 1
+ORA-00312: online log 3 thread 1: 'C:\DGI2017\DGI\REDO03.LOG'
+ORA-27041: unable to open file
+OSD-04002: unable to open file
+O/S-Error: (OS 2) The system cannot find the file specified.
+
+Thu Jun 15 08:04:49 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 08:04:53 2017
+Assigning activation ID 2102753872 (0x7d557a50)
+Thread 1 opened at log sequence 1
+  Current log# 3 seq# 1 mem# 0: C:\DGI2017\DGI\REDO03.LOG
+Successful open of redo thread 1
+Thu Jun 15 08:04:54 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 08:04:54 2017
+SMON: enabling cache recovery
+Thu Jun 15 08:05:01 2017
+Successfully onlined Undo Tablespace 1.
+Dictionary check beginning
+Tablespace 'TEMP' #3 found in data dictionary,
+but not in the controlfile. Adding to controlfile.
+Dictionary check complete
+Thu Jun 15 08:05:02 2017
+SMON: enabling tx recovery
+Thu Jun 15 08:05:03 2017
+*********************************************************************
+WARNING: The following temporary tablespaces contain no files.
+         This condition can occur when a backup controlfile has
+         been restored.  It may be necessary to add files to these
+         tablespaces.  That can be done using the SQL statement:
+ 
+         ALTER TABLESPACE <tablespace_name> ADD TEMPFILE
+ 
+         Alternatively, if these temporary tablespaces are no longer
+         needed, then they can be dropped.
+           Empty temporary tablespace: TEMP
+*********************************************************************
+Database Characterset is US7ASCII
+Threshold validation cannot be done before catproc is loaded.
+Threshold validation cannot be done before catproc is loaded.
+**********************************************************
+WARNING: Files may exists in db_recovery_file_dest
+that are not known to the database. Use the RMAN command
+CATALOG RECOVERY AREA to re-catalog any such files.
+One of the following events caused this:
+1. A backup controlfile was restored.
+2. A standby controlfile was restored.
+3. The controlfile was re-created.
+4. db_recovery_file_dest had previously been enabled and
+   then disabled.
+**********************************************************
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=15, OS id=7912
+Thu Jun 15 08:05:11 2017
+LOGSTDBY: Validating controlfile with logical metadata
+Thu Jun 15 08:05:12 2017
+LOGSTDBY: Validation complete
+Global Name changed to DGI
+Thu Jun 15 08:05:23 2017
+Completed: alter database "DGI" open resetlogs
+Thu Jun 15 08:05:23 2017
+alter database rename global_name to "DGI"
+Completed: alter database rename global_name to "DGI"
+Thu Jun 15 08:05:24 2017
+ALTER TABLESPACE TEMP ADD TEMPFILE 'C:\DGI2017\DGI\TEMP01.DBF' SIZE 20480K REUSE AUTOEXTEND ON NEXT 640K MAXSIZE UNLIMITED
+Completed: ALTER TABLESPACE TEMP ADD TEMPFILE 'C:\DGI2017\DGI\TEMP01.DBF' SIZE 20480K REUSE AUTOEXTEND ON NEXT 640K MAXSIZE UNLIMITED
+Thu Jun 15 08:05:25 2017
+ALTER DATABASE DEFAULT TABLESPACE "USERS"
+Completed: ALTER DATABASE DEFAULT TABLESPACE "USERS"
+Thu Jun 15 08:05:39 2017
+ALTER SYSTEM disable restricted session;
+Thu Jun 15 08:05:40 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 08:05:46 2017
+Starting background process CJQ0
+CJQ0 started with pid=19, OS id=4652
+Thu Jun 15 08:05:46 2017
+The input backup piece C:\ORACLE\PRODUCT\10.2.0\DB_5\ASSISTANTS\DBCA\TEMPLATES\EXAMPLE01.DFB is in compressed format.
+Thu Jun 15 08:06:07 2017
+Full restore complete of datafile 5 to datafile copy C:\DGI2017\DGI\EXAMPLE01.DBF.  Elapsed time: 0:00:21 
+  checkpoint is 538903
+  last deallocation scn is 538486
+Thu Jun 15 08:06:15 2017
+Plug in tablespace EXAMPLE with datafile
+  'C:\DGI2017\DGI\EXAMPLE01.DBF'
+Thu Jun 15 08:09:01 2017
+ALTER TABLESPACE example READ WRITE
+Thu Jun 15 08:09:01 2017
+Completed: ALTER TABLESPACE example READ WRITE
+Thu Jun 15 08:11:54 2017
+Starting background process EMN0
+EMN0 started with pid=18, OS id=5144
+Thu Jun 15 08:11:54 2017
+Shutting down instance: further logons disabled
+Thu Jun 15 08:11:57 2017
+Stopping background process QMNC
+Thu Jun 15 08:11:58 2017
+Stopping background process CJQ0
+Thu Jun 15 08:11:59 2017
+Stopping background process MMNL
+Thu Jun 15 08:12:00 2017
+Stopping background process MMON
+Thu Jun 15 08:12:02 2017
+Shutting down instance (immediate)
+License high water mark = 5
+All dispatchers and shared servers shutdown
+Thu Jun 15 08:12:09 2017
+ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 08:12:11 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Thu Jun 15 08:12:12 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 1
+Successful close of redo thread 1
+Thu Jun 15 08:12:13 2017
+Completed: ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 08:12:13 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thu Jun 15 08:12:18 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  _no_recovery_through_resetlogs= TRUE
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=6808
+PSP0 started with pid=3, OS id=3276
+MMAN started with pid=4, OS id=4700
+DBW0 started with pid=5, OS id=4600
+LGWR started with pid=6, OS id=2480
+CKPT started with pid=7, OS id=3344
+SMON started with pid=8, OS id=3244
+RECO started with pid=9, OS id=1040
+MMON started with pid=10, OS id=6972
+Thu Jun 15 08:12:19 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 08:12:19 2017
+starting up 1 shared server(s) ...
+MMNL started with pid=11, OS id=1780
+Thu Jun 15 08:12:21 2017
+ALTER DATABASE   MOUNT
+Thu Jun 15 08:12:26 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 08:12:26 2017
+Successful mount of redo thread 1, with mount id 2102766629
+Thu Jun 15 08:12:27 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Thu Jun 15 08:12:28 2017
+ALTER DATABASE OPEN
+Thu Jun 15 08:12:28 2017
+Thread 1 opened at log sequence 1
+  Current log# 3 seq# 1 mem# 0: C:\DGI2017\DGI\REDO03.LOG
+Successful open of redo thread 1
+Thu Jun 15 08:12:28 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 08:12:28 2017
+SMON: enabling cache recovery
+Thu Jun 15 08:12:30 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 08:12:30 2017
+SMON: enabling tx recovery
+Thu Jun 15 08:12:31 2017
+Database Characterset is US7ASCII
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=15, OS id=3868
+Thu Jun 15 08:12:40 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 08:12:41 2017
+Completed: ALTER DATABASE OPEN
+Thu Jun 15 08:12:41 2017
+Stopping background process MMNL
+Thu Jun 15 08:12:43 2017
+Stopping background process MMON
+Starting background process MMON
+Starting background process MMNL
+Thu Jun 15 08:12:45 2017
+ALTER SYSTEM enable restricted session;
+Thu Jun 15 08:12:45 2017
+alter database character set INTERNAL_CONVERT WE8MSWIN1252
+MMON started with pid=10, OS id=6748
+MMNL started with pid=16, OS id=3320
+Thu Jun 15 08:13:06 2017
+Thread 1 advanced to log sequence 2
+  Current log# 1 seq# 2 mem# 0: C:\DGI2017\DGI\REDO01.LOG
+Thu Jun 15 08:13:17 2017
+Updating character set in controlfile to WE8MSWIN1252
+Synchronizing connection with database character set information
+Refreshing type attributes with new character set information
+Completed: alter database character set INTERNAL_CONVERT WE8MSWIN1252
+Thu Jun 15 08:13:27 2017
+alter database national character set INTERNAL_CONVERT UTF8
+Thu Jun 15 08:13:34 2017
+Completed: alter database national character set INTERNAL_CONVERT UTF8
+Thu Jun 15 08:13:36 2017
+ALTER SYSTEM disable restricted session;
+Thu Jun 15 08:13:42 2017
+Starting background process CJQ0
+CJQ0 started with pid=18, OS id=2528
+Thu Jun 15 08:14:02 2017
+Starting background process EMN0
+EMN0 started with pid=19, OS id=6032
+Thu Jun 15 08:14:03 2017
+Shutting down instance: further logons disabled
+Thu Jun 15 08:14:12 2017
+Stopping background process QMNC
+Thu Jun 15 08:14:13 2017
+Stopping background process CJQ0
+Thu Jun 15 08:14:13 2017
+Stopping background process MMNL
+Thu Jun 15 08:14:14 2017
+Stopping background process MMON
+Thu Jun 15 08:14:17 2017
+Shutting down instance (immediate)
+License high water mark = 1
+All dispatchers and shared servers shutdown
+Thu Jun 15 08:14:24 2017
+ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 08:14:27 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Thu Jun 15 08:14:28 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 2
+Successful close of redo thread 1
+Thu Jun 15 08:14:29 2017
+Completed: ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 08:14:29 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thu Jun 15 08:14:36 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=5512
+PSP0 started with pid=3, OS id=3564
+MMAN started with pid=4, OS id=6152
+DBW0 started with pid=5, OS id=1020
+LGWR started with pid=6, OS id=3604
+CKPT started with pid=7, OS id=3012
+SMON started with pid=8, OS id=6164
+RECO started with pid=9, OS id=7252
+CJQ0 started with pid=10, OS id=44
+MMON started with pid=11, OS id=6668
+Thu Jun 15 08:14:37 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 08:14:37 2017
+starting up 1 shared server(s) ...
+MMNL started with pid=12, OS id=6780
+Thu Jun 15 08:14:38 2017
+ALTER DATABASE   MOUNT
+Thu Jun 15 08:14:43 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 08:14:44 2017
+Successful mount of redo thread 1, with mount id 2102739374
+Thu Jun 15 08:14:44 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Thu Jun 15 08:14:45 2017
+ALTER DATABASE OPEN
+Thu Jun 15 08:14:46 2017
+Thread 1 opened at log sequence 2
+  Current log# 1 seq# 2 mem# 0: C:\DGI2017\DGI\REDO01.LOG
+Successful open of redo thread 1
+Thu Jun 15 08:14:46 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 08:14:47 2017
+SMON: enabling cache recovery
+Thu Jun 15 08:14:52 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 08:14:52 2017
+SMON: enabling tx recovery
+Thu Jun 15 08:14:52 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=16, OS id=656
+Thu Jun 15 08:15:04 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 08:15:04 2017
+Completed: ALTER DATABASE OPEN
+SERVER COMPONENT id=CPU_BGN: timestamp=2017-06-15 08:16:47
+Thu Jun 15 08:17:10 2017
+Thread 1 advanced to log sequence 3
+  Current log# 2 seq# 3 mem# 0: C:\DGI2017\DGI\REDO02.LOG
+Thu Jun 15 08:17:40 2017
+SERVER COMPONENT id=CATPROC: timestamp=2017-06-15 08:17:40
+Thu Jun 15 08:20:36 2017
+Thread 1 advanced to log sequence 4
+  Current log# 3 seq# 4 mem# 0: C:\DGI2017\DGI\REDO03.LOG
+Thu Jun 15 08:27:08 2017
+Thread 1 advanced to log sequence 5
+  Current log# 1 seq# 5 mem# 0: C:\DGI2017\DGI\REDO01.LOG
+Thu Jun 15 08:29:03 2017
+SERVER ACTION=CPU id=5923165: Patch2Vista
+SERVER COMPONENT id=CPU_END: timestamp=2017-06-15 08:29:04
+Thu Jun 15 08:29:12 2017
+SERVER COMPONENT id=UTLRP_BGN: timestamp=2017-06-15 08:29:12
+Thu Jun 15 08:30:37 2017
+SERVER COMPONENT id=UTLRP_END: timestamp=2017-06-15 08:30:37
+Thu Jun 15 08:59:15 2017
+Shutting down instance (abort)
+License high water mark = 20
+Instance terminated by USER, pid = 7544
+Thu Jun 15 08:59:23 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=5380
+MMAN started with pid=4, OS id=7112
+DBW0 started with pid=5, OS id=3400
+CKPT started with pid=7, OS id=3236
+SMON started with pid=8, OS id=4348
+RECO started with pid=9, OS id=7720
+CJQ0 started with pid=10, OS id=6580
+MMON started with pid=11, OS id=4564
+PSP0 started with pid=3, OS id=7632
+LGWR started with pid=6, OS id=3220
+MMNL started with pid=12, OS id=5256
+Thu Jun 15 08:59:27 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+Thu Jun 15 08:59:28 2017
+ALTER DATABASE   MOUNT
+Thu Jun 15 08:59:32 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 08:59:33 2017
+Successful mount of redo thread 1, with mount id 2102755120
+Thu Jun 15 08:59:33 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Thu Jun 15 08:59:34 2017
+ALTER DATABASE OPEN
+Thu Jun 15 08:59:35 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Thu Jun 15 08:59:36 2017
+Started redo scan
+Thu Jun 15 08:59:36 2017
+Completed redo scan
+ 261 redo blocks read, 42 data blocks need recovery
+Thu Jun 15 08:59:37 2017
+Started redo application at
+ Thread 1: logseq 5, block 33459
+Thu Jun 15 08:59:37 2017
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 5 Reading mem 0
+  Mem# 0: C:\DGI2017\DGI\REDO01.LOG
+Thu Jun 15 08:59:37 2017
+Completed redo application
+Thu Jun 15 08:59:37 2017
+Completed crash recovery at
+ Thread 1: logseq 5, block 33720, scn 618548
+ 42 data blocks read, 42 data blocks written, 261 redo blocks read
+Thu Jun 15 08:59:39 2017
+Thread 1 advanced to log sequence 6
+Thread 1 opened at log sequence 6
+  Current log# 2 seq# 6 mem# 0: C:\DGI2017\DGI\REDO02.LOG
+Successful open of redo thread 1
+Thu Jun 15 08:59:39 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 08:59:39 2017
+SMON: enabling cache recovery
+Thu Jun 15 08:59:42 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 08:59:42 2017
+SMON: enabling tx recovery
+Thu Jun 15 08:59:42 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=18, OS id=896
+Thu Jun 15 08:59:54 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 08:59:54 2017
+Completed: ALTER DATABASE OPEN
+Thu Jun 15 09:05:05 2017
+create tablespace TSDGI datafile 'c:\DGI2017\data01.dbf' size 2M,'c:\DGI2017\data02.dbf' size 3M
+Thu Jun 15 09:05:08 2017
+Completed: create tablespace TSDGI datafile 'c:\DGI2017\data01.dbf' size 2M,'c:\DGI2017\data02.dbf' size 3M
+Thu Jun 15 09:07:12 2017
+alter TableSpace TSDGI add datafile 'c:\DGI2017\data03.dbf' size 1M
+Thu Jun 15 09:07:13 2017
+Completed: alter TableSpace TSDGI add datafile 'c:\DGI2017\data03.dbf' size 1M
+Thu Jun 15 09:10:20 2017
+ALTER DATABASE DATAFILE 'c:\DGI2017\data01.dbf' RESIZE 7M
+Thu Jun 15 09:10:22 2017
+Completed: ALTER DATABASE DATAFILE 'c:\DGI2017\data01.dbf' RESIZE 7M
+Thu Jun 15 09:30:24 2017
+alter tablespace TSDGI drop datafile 'c:\DGI2017\data01.dbf'
+Thu Jun 15 09:30:24 2017
+ORA-3263 signalled during: alter tablespace TSDGI drop datafile 'c:\DGI2017\data01.dbf'...
+Thu Jun 15 09:31:32 2017
+alter tablespace TSDGI drop datafile 'c:\DGI2017\data01.dbf'
+Thu Jun 15 09:31:33 2017
+ORA-3263 signalled during: alter tablespace TSDGI drop datafile 'c:\DGI2017\data01.dbf'...
+Thu Jun 15 09:33:12 2017
+alter tablespace TSDGI drop datafile 'c:\DGI2017\data01.dbf'
+Thu Jun 15 09:33:12 2017
+ORA-3263 signalled during: alter tablespace TSDGI drop datafile 'c:\DGI2017\data01.dbf'...
+Thu Jun 15 09:45:55 2017
+Starting background process EMN0
+EMN0 started with pid=30, OS id=4048
+Thu Jun 15 09:45:56 2017
+Shutting down instance: further logons disabled
+Thu Jun 15 09:45:57 2017
+Stopping background process QMNC
+Thu Jun 15 09:45:58 2017
+Stopping background process CJQ0
+Thu Jun 15 09:45:59 2017
+Stopping background process MMNL
+Thu Jun 15 09:46:00 2017
+Stopping background process MMON
+Thu Jun 15 09:46:02 2017
+Shutting down instance (immediate)
+License high water mark = 14
+Thu Jun 15 09:46:02 2017
+Stopping Job queue slave processes
+Thu Jun 15 09:46:02 2017
+Job queue slave processes stopped
+All dispatchers and shared servers shutdown
+Thu Jun 15 09:46:19 2017
+alter database close normal
+Thu Jun 15 09:46:19 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Thu Jun 15 09:46:22 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 6
+Successful close of redo thread 1
+Thu Jun 15 09:46:23 2017
+Completed: alter database close normal
+Thu Jun 15 09:46:23 2017
+alter database dismount
+Completed: alter database dismount
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Dump file c:\oracle\product\10.2.0\admin\dgi\bdump\alert_dgi.log
+Thu Jun 15 09:47:13 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1203M/3818M, Ph+PgF:1468M/6569M, VA:3971M/4095M
+Thu Jun 15 09:47:13 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=4524
+MMAN started with pid=4, OS id=6472
+DBW0 started with pid=5, OS id=1912
+CKPT started with pid=7, OS id=1920
+RECO started with pid=9, OS id=7912
+CJQ0 started with pid=10, OS id=7316
+MMON started with pid=11, OS id=3108
+Thu Jun 15 09:47:15 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 09:47:15 2017
+starting up 1 shared server(s) ...
+Thu Jun 15 09:47:15 2017
+alter database mount exclusive
+PSP0 started with pid=3, OS id=2152
+LGWR started with pid=6, OS id=7408
+SMON started with pid=8, OS id=1056
+MMNL started with pid=12, OS id=7596
+Thu Jun 15 09:47:20 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 09:47:21 2017
+Successful mount of redo thread 1, with mount id 2102760291
+Thu Jun 15 09:47:21 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Thu Jun 15 09:47:21 2017
+alter database open
+Thu Jun 15 09:47:22 2017
+Thread 1 opened at log sequence 6
+  Current log# 2 seq# 6 mem# 0: C:\DGI2017\DGI\REDO02.LOG
+Successful open of redo thread 1
+Thu Jun 15 09:47:22 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 09:47:22 2017
+SMON: enabling cache recovery
+Thu Jun 15 09:47:25 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 09:47:25 2017
+SMON: enabling tx recovery
+Thu Jun 15 09:47:26 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=16, OS id=7256
+Thu Jun 15 09:47:37 2017
+Completed: alter database open
+Thu Jun 15 09:47:39 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 09:49:00 2017
+Starting background process EMN0
+EMN0 started with pid=24, OS id=4928
+Thu Jun 15 09:49:01 2017
+Shutting down instance: further logons disabled
+Thu Jun 15 09:49:02 2017
+Stopping background process QMNC
+Thu Jun 15 09:49:03 2017
+Stopping background process CJQ0
+Thu Jun 15 09:49:04 2017
+Stopping background process MMNL
+Thu Jun 15 09:49:04 2017
+Stopping background process MMON
+Thu Jun 15 09:49:05 2017
+Shutting down instance (immediate)
+License high water mark = 6
+Thu Jun 15 09:49:05 2017
+Stopping Job queue slave processes
+Thu Jun 15 09:49:05 2017
+Job queue slave processes stopped
+All dispatchers and shared servers shutdown
+Thu Jun 15 09:49:14 2017
+alter database close normal
+Thu Jun 15 09:49:17 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Thu Jun 15 09:49:21 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 6
+Successful close of redo thread 1
+Thu Jun 15 09:49:26 2017
+Completed: alter database close normal
+Thu Jun 15 09:49:26 2017
+alter database dismount
+Completed: alter database dismount
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Dump file c:\oracle\product\10.2.0\admin\dgi\bdump\alert_dgi.log
+Thu Jun 15 09:55:25 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1207M/3818M, Ph+PgF:1527M/6591M, VA:3971M/4095M
+Thu Jun 15 09:55:25 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=8024
+MMAN started with pid=4, OS id=4992
+DBW0 started with pid=5, OS id=2804
+CKPT started with pid=7, OS id=5324
+SMON started with pid=8, OS id=7848
+RECO started with pid=9, OS id=3452
+CJQ0 started with pid=10, OS id=700
+Thu Jun 15 09:55:27 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 09:55:27 2017
+starting up 1 shared server(s) ...
+Thu Jun 15 09:55:27 2017
+alter database mount exclusive
+PSP0 started with pid=3, OS id=5408
+LGWR started with pid=6, OS id=2440
+MMON started with pid=11, OS id=7248
+MMNL started with pid=12, OS id=7504
+Thu Jun 15 09:55:31 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 09:55:32 2017
+Successful mount of redo thread 1, with mount id 2102741839
+Thu Jun 15 09:55:32 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Thu Jun 15 09:55:32 2017
+alter database open
+Thu Jun 15 09:55:32 2017
+Errors in file c:\oracle\product\10.2.0\admin\dgi\bdump\dgi_dbw0_2804.trc:
+ORA-01157: cannot identify/lock data file 6 - see DBWR trace file
+ORA-01110: data file 6: 'C:\DGI2017\DATA01.DBF'
+ORA-27041: unable to open file
+OSD-04002: unable to open file
+O/S-Error: (OS 2) The system cannot find the file specified.
+
+ORA-1157 signalled during: alter database open...
+Thu Jun 15 09:57:54 2017
+Shutting down instance (abort)
+License high water mark = 2
+Instance terminated by USER, pid = 7000
+Thu Jun 15 09:57:57 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=7756
+MMAN started with pid=4, OS id=2956
+DBW0 started with pid=5, OS id=8032
+CKPT started with pid=7, OS id=2932
+RECO started with pid=9, OS id=5792
+MMON started with pid=11, OS id=5308
+PSP0 started with pid=3, OS id=8092
+LGWR started with pid=6, OS id=3964
+SMON started with pid=8, OS id=5300
+CJQ0 started with pid=10, OS id=7788
+Thu Jun 15 09:58:00 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+MMNL started with pid=12, OS id=2704
+Thu Jun 15 09:58:03 2017
+ALTER DATABASE   MOUNT
+Thu Jun 15 09:58:08 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 09:58:09 2017
+Successful mount of redo thread 1, with mount id 2102755051
+Thu Jun 15 09:58:09 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Thu Jun 15 09:58:11 2017
+ALTER DATABASE OPEN
+Thu Jun 15 09:58:11 2017
+Errors in file c:\oracle\product\10.2.0\admin\dgi\bdump\dgi_dbw0_8032.trc:
+ORA-01157: cannot identify/lock data file 6 - see DBWR trace file
+ORA-01110: data file 6: 'C:\DGI2017\DATA01.DBF'
+ORA-27041: unable to open file
+OSD-04002: unable to open file
+O/S-Error: (OS 2) The system cannot find the file specified.
+
+ORA-1157 signalled during: ALTER DATABASE OPEN...
+Thu Jun 15 10:01:23 2017
+alter database create datafile 'C:\DGI2017\data05.DBF'
+Thu Jun 15 10:01:23 2017
+ORA-1516 signalled during: alter database create datafile 'C:\DGI2017\data05.DBF'...
+Thu Jun 15 10:01:39 2017
+alter database create datafile 'C:\DGI2017\data01.DBF'
+Thu Jun 15 10:01:40 2017
+Completed: alter database create datafile 'C:\DGI2017\data01.DBF'
+Thu Jun 15 10:03:17 2017
+Shutting down instance (abort)
+License high water mark = 2
+Instance terminated by USER, pid = 7884
+Thu Jun 15 10:03:20 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=3160
+MMAN started with pid=4, OS id=3732
+DBW0 started with pid=5, OS id=6296
+CKPT started with pid=7, OS id=6068
+RECO started with pid=9, OS id=4288
+MMON started with pid=11, OS id=5696
+MMNL started with pid=12, OS id=2488
+Thu Jun 15 10:03:22 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+PSP0 started with pid=3, OS id=4596
+LGWR started with pid=6, OS id=7568
+SMON started with pid=8, OS id=8184
+CJQ0 started with pid=10, OS id=5704
+Thu Jun 15 10:03:24 2017
+ALTER DATABASE   MOUNT
+Thu Jun 15 10:03:29 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 10:03:29 2017
+Successful mount of redo thread 1, with mount id 2102728492
+Thu Jun 15 10:03:29 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Thu Jun 15 10:03:31 2017
+ALTER DATABASE OPEN
+ORA-1113 signalled during: ALTER DATABASE OPEN...
+Thu Jun 15 10:03:59 2017
+alter database create datafile 'C:\DGI2017\data01.DBF'
+Thu Jun 15 10:04:01 2017
+Completed: alter database create datafile 'C:\DGI2017\data01.DBF'
+Thu Jun 15 10:04:23 2017
+ALTER DATABASE RECOVER  database  
+Thu Jun 15 10:04:23 2017
+Media Recovery Start
+ parallel recovery started with 2 processes
+Thu Jun 15 10:04:24 2017
+Recovery of Online Redo Log: Thread 1 Group 2 Seq 6 Reading mem 0
+  Mem# 0: C:\DGI2017\DGI\REDO02.LOG
+Completed: ALTER DATABASE RECOVER  database  
+Thu Jun 15 10:04:31 2017
+Shutting down instance (abort)
+License high water mark = 3
+Instance terminated by USER, pid = 3148
+Thu Jun 15 10:04:37 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=4788
+MMAN started with pid=4, OS id=4564
+DBW0 started with pid=5, OS id=7032
+CKPT started with pid=7, OS id=7652
+RECO started with pid=9, OS id=6700
+MMON started with pid=11, OS id=2732
+PSP0 started with pid=3, OS id=5424
+LGWR started with pid=6, OS id=44
+SMON started with pid=8, OS id=7412
+CJQ0 started with pid=10, OS id=1604
+MMNL started with pid=12, OS id=6664
+Thu Jun 15 10:04:40 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+Thu Jun 15 10:04:42 2017
+ALTER DATABASE   MOUNT
+Thu Jun 15 10:04:48 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 10:04:48 2017
+Successful mount of redo thread 1, with mount id 2102755194
+Thu Jun 15 10:04:48 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Thu Jun 15 10:04:50 2017
+ALTER DATABASE OPEN
+Thu Jun 15 10:04:52 2017
+Thread 1 opened at log sequence 6
+  Current log# 2 seq# 6 mem# 0: C:\DGI2017\DGI\REDO02.LOG
+Successful open of redo thread 1
+Thu Jun 15 10:04:52 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 10:04:52 2017
+SMON: enabling cache recovery
+Thu Jun 15 10:04:55 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 10:04:55 2017
+SMON: enabling tx recovery
+Thu Jun 15 10:04:55 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=16, OS id=7720
+Thu Jun 15 10:05:02 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 10:05:03 2017
+Completed: ALTER DATABASE OPEN
+Thu Jun 15 11:24:29 2017
+Starting background process EMN0
+EMN0 started with pid=15, OS id=5380
+Thu Jun 15 11:24:30 2017
+Shutting down instance: further logons disabled
+Thu Jun 15 11:24:31 2017
+Stopping background process QMNC
+Thu Jun 15 11:24:32 2017
+Stopping background process CJQ0
+Thu Jun 15 11:24:33 2017
+Stopping background process MMNL
+Thu Jun 15 11:24:34 2017
+Stopping background process MMON
+Thu Jun 15 11:24:36 2017
+Shutting down instance (immediate)
+License high water mark = 17
+Thu Jun 15 11:24:37 2017
+Stopping Job queue slave processes
+Thu Jun 15 11:24:37 2017
+Job queue slave processes stopped
+All dispatchers and shared servers shutdown
+Thu Jun 15 11:24:51 2017
+ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 11:24:51 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Thu Jun 15 11:24:52 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 6
+Successful close of redo thread 1
+Thu Jun 15 11:24:54 2017
+Completed: ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 11:24:54 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+sksasmothrd ReadConsole error 233
+Dump file c:\oracle\product\10.2.0\admin\dgi\bdump\alert_dgi.log
+Thu Jun 15 15:49:09 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2523M/3818M, Ph+PgF:5622M/7018M, VA:3971M/4095M
+Thu Jun 15 15:49:09 2017
+Starting ORACLE instance (normal)
+Thu Jun 15 15:49:21 2017
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+MMAN started with pid=4, OS id=4216
+PMON started with pid=2, OS id=4184
+PSP0 started with pid=3, OS id=4200
+DBW0 started with pid=5, OS id=4224
+LGWR started with pid=6, OS id=4240
+CKPT started with pid=7, OS id=4248
+SMON started with pid=8, OS id=4272
+RECO started with pid=9, OS id=4288
+CJQ0 started with pid=10, OS id=4304
+MMON started with pid=11, OS id=4316
+MMNL started with pid=12, OS id=4372
+Thu Jun 15 15:49:30 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+Thu Jun 15 15:49:39 2017
+alter database mount exclusive
+Thu Jun 15 15:49:46 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 15:49:51 2017
+Successful mount of redo thread 1, with mount id 2102788180
+Thu Jun 15 15:49:51 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Thu Jun 15 15:49:52 2017
+alter database open
+Thu Jun 15 15:50:10 2017
+Thread 1 opened at log sequence 6
+  Current log# 2 seq# 6 mem# 0: C:\DGI2017\DGI\REDO02.LOG
+Successful open of redo thread 1
+Thu Jun 15 15:50:10 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 15:50:10 2017
+SMON: enabling cache recovery
+Thu Jun 15 15:50:41 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 15:50:41 2017
+SMON: enabling tx recovery
+Thu Jun 15 15:50:47 2017
+Database Characterset is WE8MSWIN1252
+Thu Jun 15 15:51:02 2017
+replication_dependency_tracking turned off (no async multimaster replication found)
+Thu Jun 15 15:51:15 2017
+Starting background process QMNC
+QMNC started with pid=16, OS id=5024
+Thu Jun 15 15:52:42 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 15:52:51 2017
+Completed: alter database open
+Fri Jun 16 03:32:52 2017
+MMNL absent for 35987 secs; Foregrounds taking over
+Fri Jun 16 11:31:03 2017
+MMNL absent for 24350 secs; Foregrounds taking over
+MMNL absent for 24355 secs; Foregrounds taking over
+MMNL absent for 24355 secs; Foregrounds taking over
+Fri Jun 16 11:31:40 2017
+Thread 1 advanced to log sequence 7
+  Current log# 3 seq# 7 mem# 0: C:\DGI2017\DGI\REDO03.LOG
+Fri Jun 16 17:36:39 2017
+MMNL absent for 13195 secs; Foregrounds taking over
+Fri Jun 16 17:36:45 2017
+MMNL absent for 13195 secs; Foregrounds taking over
+Sat Jun 17 04:17:12 2017
+MMNL absent for 36748 secs; Foregrounds taking over
+Sat Jun 17 07:06:22 2017
+Thread 1 advanced to log sequence 8
+  Current log# 1 seq# 8 mem# 0: C:\DGI2017\DGI\REDO01.LOG
+Dump file c:\oracle\product\10.2.0\admin\dgi\bdump\alert_dgi.log
+Sat Jun 17 11:36:08 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2631M/3818M, Ph+PgF:5750M/7018M, VA:3971M/4095M
+Sat Jun 17 11:36:08 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+Sat Jun 17 11:36:18 2017
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=3376
+PSP0 started with pid=3, OS id=3392
+MMAN started with pid=4, OS id=3428
+DBW0 started with pid=5, OS id=3440
+LGWR started with pid=6, OS id=3476
+CKPT started with pid=7, OS id=3496
+SMON started with pid=8, OS id=3528
+RECO started with pid=9, OS id=3548
+CJQ0 started with pid=10, OS id=3580
+MMON started with pid=11, OS id=3612
+Sat Jun 17 11:36:22 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Sat Jun 17 11:36:23 2017
+starting up 1 shared server(s) ...
+Sat Jun 17 11:36:23 2017
+alter database mount exclusive
+MMNL started with pid=12, OS id=3624
+Sat Jun 17 11:36:31 2017
+Setting recovery target incarnation to 2
+Sat Jun 17 11:36:32 2017
+Successful mount of redo thread 1, with mount id 2102940410
+Sat Jun 17 11:36:32 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Sat Jun 17 11:36:32 2017
+alter database open
+Sat Jun 17 11:36:35 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Sat Jun 17 11:36:38 2017
+Started redo scan
+Sat Jun 17 11:36:40 2017
+Completed redo scan
+ 91 redo blocks read, 30 data blocks need recovery
+Sat Jun 17 11:36:40 2017
+Started redo application at
+ Thread 1: logseq 8, block 11773
+Sat Jun 17 11:36:41 2017
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 8 Reading mem 0
+  Mem# 0: C:\DGI2017\DGI\REDO01.LOG
+Sat Jun 17 11:36:41 2017
+Completed redo application
+Sat Jun 17 11:36:42 2017
+Completed crash recovery at
+ Thread 1: logseq 8, block 11864, scn 721069
+ 30 data blocks read, 30 data blocks written, 91 redo blocks read
+Sat Jun 17 11:36:52 2017
+Thread 1 advanced to log sequence 9
+Thread 1 opened at log sequence 9
+  Current log# 2 seq# 9 mem# 0: C:\DGI2017\DGI\REDO02.LOG
+Successful open of redo thread 1
+Sat Jun 17 11:36:52 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Sat Jun 17 11:36:53 2017
+SMON: enabling cache recovery
+Sat Jun 17 11:37:16 2017
+Successfully onlined Undo Tablespace 1.
+Sat Jun 17 11:37:16 2017
+SMON: enabling tx recovery
+Sat Jun 17 11:37:18 2017
+Database Characterset is WE8MSWIN1252
+Sat Jun 17 11:37:31 2017
+replication_dependency_tracking turned off (no async multimaster replication found)
+Sat Jun 17 11:37:41 2017
+Starting background process QMNC
+QMNC started with pid=18, OS id=1220
+Sat Jun 17 11:39:03 2017
+Completed: alter database open
+Sat Jun 17 11:39:17 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Dump file c:\oracle\product\10.2.0\admin\dgi\bdump\alert_dgi.log
+Sat Jun 17 13:11:28 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2514M/3818M, Ph+PgF:5147M/7018M, VA:3971M/4095M
+Sat Jun 17 13:11:28 2017
+Starting ORACLE instance (normal)
+Sat Jun 17 13:11:39 2017
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=4072
+PSP0 started with pid=3, OS id=2948
+MMAN started with pid=4, OS id=3604
+DBW0 started with pid=5, OS id=3636
+LGWR started with pid=6, OS id=240
+CKPT started with pid=7, OS id=3844
+SMON started with pid=8, OS id=3692
+RECO started with pid=9, OS id=3652
+CJQ0 started with pid=10, OS id=3992
+MMON started with pid=11, OS id=3856
+MMNL started with pid=12, OS id=3904
+Sat Jun 17 13:11:48 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+Sat Jun 17 13:11:57 2017
+alter database mount exclusive
+Sat Jun 17 13:12:04 2017
+Setting recovery target incarnation to 2
+Sat Jun 17 13:12:06 2017
+Successful mount of redo thread 1, with mount id 2102928477
+Sat Jun 17 13:12:06 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Sat Jun 17 13:12:07 2017
+alter database open
+Sat Jun 17 13:12:15 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Sat Jun 17 13:12:22 2017
+Started redo scan
+Sat Jun 17 13:12:26 2017
+Completed redo scan
+ 2477 redo blocks read, 423 data blocks need recovery
+Sat Jun 17 13:12:26 2017
+Started redo application at
+ Thread 1: logseq 9, block 15005
+Sat Jun 17 13:12:29 2017
+Recovery of Online Redo Log: Thread 1 Group 2 Seq 9 Reading mem 0
+  Mem# 0: C:\DGI2017\DGI\REDO02.LOG
+Sat Jun 17 13:12:29 2017
+Completed redo application
+Sat Jun 17 13:12:30 2017
+Completed crash recovery at
+ Thread 1: logseq 9, block 17482, scn 748265
+ 423 data blocks read, 423 data blocks written, 2477 redo blocks read
+Sat Jun 17 13:12:46 2017
+Thread 1 advanced to log sequence 10
+Thread 1 opened at log sequence 10
+  Current log# 3 seq# 10 mem# 0: C:\DGI2017\DGI\REDO03.LOG
+Successful open of redo thread 1
+Sat Jun 17 13:12:47 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Sat Jun 17 13:12:47 2017
+SMON: enabling cache recovery
+Sat Jun 17 13:13:07 2017
+Successfully onlined Undo Tablespace 1.
+Sat Jun 17 13:13:07 2017
+SMON: enabling tx recovery
+Sat Jun 17 13:13:10 2017
+Database Characterset is WE8MSWIN1252
+Sat Jun 17 13:13:23 2017
+replication_dependency_tracking turned off (no async multimaster replication found)
+Sat Jun 17 13:13:34 2017
+Starting background process QMNC
+QMNC started with pid=18, OS id=2536
+Sat Jun 17 13:14:55 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Sat Jun 17 13:15:03 2017
+Completed: alter database open
+Sun Jun 18 04:28:38 2017
+MMNL absent for 54462 secs; Foregrounds taking over
+MMNL absent for 54468 secs; Foregrounds taking over
+MMNL absent for 54469 secs; Foregrounds taking over
+Dump file c:\oracle\product\10.2.0\admin\dgi\bdump\alert_dgi.log
+Sun Jun 18 07:38:59 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2518M/3818M, Ph+PgF:5803M/7658M, VA:3971M/4095M
+Sun Jun 18 07:38:59 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+Sun Jun 18 07:39:10 2017
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PSP0 started with pid=3, OS id=2336
+MMAN started with pid=4, OS id=2488
+PMON started with pid=2, OS id=3768
+DBW0 started with pid=5, OS id=3080
+LGWR started with pid=6, OS id=4060
+CKPT started with pid=7, OS id=388
+SMON started with pid=8, OS id=3488
+RECO started with pid=9, OS id=4040
+CJQ0 started with pid=10, OS id=3092
+MMON started with pid=11, OS id=2604
+Sun Jun 18 07:39:20 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=12, OS id=1140
+Sun Jun 18 07:39:20 2017
+starting up 1 shared server(s) ...
+Sun Jun 18 07:39:29 2017
+alter database mount exclusive
+Sun Jun 18 07:39:36 2017
+Setting recovery target incarnation to 2
+Sun Jun 18 07:39:39 2017
+Successful mount of redo thread 1, with mount id 2103002097
+Sun Jun 18 07:39:39 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Sun Jun 18 07:39:39 2017
+alter database open
+Sun Jun 18 07:39:45 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Sun Jun 18 07:39:50 2017
+Started redo scan
+Sun Jun 18 07:39:53 2017
+Completed redo scan
+ 577 redo blocks read, 99 data blocks need recovery
+Sun Jun 18 07:39:53 2017
+Started redo application at
+ Thread 1: logseq 10, block 35691
+Sun Jun 18 07:39:54 2017
+Recovery of Online Redo Log: Thread 1 Group 3 Seq 10 Reading mem 0
+  Mem# 0: C:\DGI2017\DGI\REDO03.LOG
+Sun Jun 18 07:39:55 2017
+Completed redo application
+Sun Jun 18 07:39:57 2017
+Completed crash recovery at
+ Thread 1: logseq 10, block 36268, scn 782019
+ 99 data blocks read, 99 data blocks written, 577 redo blocks read
+Sun Jun 18 07:40:07 2017
+Thread 1 advanced to log sequence 11
+Thread 1 opened at log sequence 11
+  Current log# 1 seq# 11 mem# 0: C:\DGI2017\DGI\REDO01.LOG
+Successful open of redo thread 1
+Sun Jun 18 07:40:08 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Sun Jun 18 07:40:08 2017
+SMON: enabling cache recovery
+Sun Jun 18 07:40:34 2017
+Successfully onlined Undo Tablespace 1.
+Sun Jun 18 07:40:34 2017
+SMON: enabling tx recovery
+Sun Jun 18 07:40:37 2017
+Database Characterset is WE8MSWIN1252
+Sun Jun 18 07:40:50 2017
+replication_dependency_tracking turned off (no async multimaster replication found)
+Sun Jun 18 07:41:05 2017
+Starting background process QMNC
+QMNC started with pid=18, OS id=4604
+Sun Jun 18 07:42:27 2017
+Completed: alter database open
+Sun Jun 18 07:42:29 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Sun Jun 18 13:37:13 2017
+MMNL absent for 20020 secs; Foregrounds taking over
+Sun Jun 18 16:40:19 2017
+MMNL absent for 7242 secs; Foregrounds taking over
+Sun Jun 18 19:58:53 2017
+MMNL absent for 9808 secs; Foregrounds taking over
+MMNL absent for 9811 secs; Foregrounds taking over
+MMNL absent for 9811 secs; Foregrounds taking over
+Mon Jun 19 06:05:22 2017
+MMNL absent for 25026 secs; Foregrounds taking over
+Mon Jun 19 09:48:13 2017
+Shutting down instance (abort)
+License high water mark = 15
+Instance terminated by USER, pid = 4832
+Mon Jun 19 09:48:23 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=6140
+PSP0 started with pid=3, OS id=92
+MMAN started with pid=4, OS id=9424
+DBW0 started with pid=5, OS id=5152
+RECO started with pid=9, OS id=9640
+MMON started with pid=11, OS id=5656
+LGWR started with pid=6, OS id=8204
+CJQ0 started with pid=10, OS id=5296
+CKPT started with pid=7, OS id=3032
+MMNL started with pid=12, OS id=7504
+SMON started with pid=8, OS id=5700
+Mon Jun 19 09:48:35 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+Mon Jun 19 09:48:37 2017
+ALTER DATABASE   MOUNT
+Mon Jun 19 09:48:43 2017
+Setting recovery target incarnation to 2
+Mon Jun 19 09:48:43 2017
+Successful mount of redo thread 1, with mount id 2103145141
+Mon Jun 19 09:48:43 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Mon Jun 19 09:48:44 2017
+ALTER DATABASE OPEN
+Mon Jun 19 09:48:45 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Mon Jun 19 09:48:47 2017
+Started redo scan
+Mon Jun 19 09:48:48 2017
+Completed redo scan
+ 516 redo blocks read, 100 data blocks need recovery
+Mon Jun 19 09:48:48 2017
+Started redo application at
+ Thread 1: logseq 11, block 85468
+Mon Jun 19 09:48:49 2017
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 11 Reading mem 0
+  Mem# 0: C:\DGI2017\DGI\REDO01.LOG
+Mon Jun 19 09:48:49 2017
+Completed redo application
+Mon Jun 19 09:48:49 2017
+Completed crash recovery at
+ Thread 1: logseq 11, block 85984, scn 837567
+ 100 data blocks read, 100 data blocks written, 516 redo blocks read
+Mon Jun 19 09:48:53 2017
+Thread 1 advanced to log sequence 12
+Thread 1 opened at log sequence 12
+  Current log# 2 seq# 12 mem# 0: C:\DGI2017\DGI\REDO02.LOG
+Successful open of redo thread 1
+Mon Jun 19 09:48:53 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Mon Jun 19 09:48:53 2017
+SMON: enabling cache recovery
+Mon Jun 19 09:48:59 2017
+Successfully onlined Undo Tablespace 1.
+Mon Jun 19 09:48:59 2017
+SMON: enabling tx recovery
+Mon Jun 19 09:48:59 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=18, OS id=9028
+Mon Jun 19 09:49:13 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Mon Jun 19 09:49:16 2017
+Completed: ALTER DATABASE OPEN
+Mon Jun 19 10:07:54 2017
+Starting background process EMN0
+EMN0 started with pid=16, OS id=8964
+Mon Jun 19 10:07:56 2017
+Shutting down instance: further logons disabled
+Mon Jun 19 10:07:57 2017
+Stopping background process QMNC
+Mon Jun 19 10:07:58 2017
+Stopping background process CJQ0
+Mon Jun 19 10:07:59 2017
+Stopping background process MMNL
+Mon Jun 19 10:08:02 2017
+Stopping background process MMON
+Mon Jun 19 10:08:03 2017
+Shutting down instance (immediate)
+License high water mark = 16
+Mon Jun 19 10:08:03 2017
+Stopping Job queue slave processes
+Mon Jun 19 10:08:04 2017
+Job queue slave processes stopped
+All dispatchers and shared servers shutdown
+Mon Jun 19 10:08:17 2017
+ALTER DATABASE CLOSE NORMAL
+Mon Jun 19 10:08:18 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Mon Jun 19 10:08:21 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 12
+Successful close of redo thread 1
+Mon Jun 19 10:08:25 2017
+Completed: ALTER DATABASE CLOSE NORMAL
+Mon Jun 19 10:08:25 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Dump file c:\oracle\product\10.2.0\admin\dgi\bdump\alert_dgi.log
+Mon Jun 19 14:40:49 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2838M/3818M, Ph+PgF:6960M/8426M, VA:3971M/4095M
+Mon Jun 19 14:40:49 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\DGI2017\DGI\CONTROL01.CTL, C:\DGI2017\DGI\CONTROL02.CTL, C:\DGI2017\DGI\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=DGIXDB)
+  local_listener           = LISTENER_DGI
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\DGI\CDUMP
+  db_name                  = DGI
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=2736
+MMAN started with pid=4, OS id=2396
+PSP0 started with pid=3, OS id=116
+DBW0 started with pid=5, OS id=2696
+LGWR started with pid=6, OS id=2612
+CKPT started with pid=7, OS id=2936
+SMON started with pid=8, OS id=2216
+RECO started with pid=9, OS id=2700
+CJQ0 started with pid=10, OS id=2676
+MMON started with pid=11, OS id=2704
+Mon Jun 19 14:40:57 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=12, OS id=956
+Mon Jun 19 14:40:57 2017
+starting up 1 shared server(s) ...
+Mon Jun 19 14:41:17 2017
+alter database mount exclusive
+Mon Jun 19 14:41:25 2017
+Setting recovery target incarnation to 2
+Mon Jun 19 14:41:29 2017
+Successful mount of redo thread 1, with mount id 2103120973
+Mon Jun 19 14:41:29 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Mon Jun 19 14:41:32 2017
+alter database open
+Mon Jun 19 14:41:43 2017
+Thread 1 opened at log sequence 12
+  Current log# 2 seq# 12 mem# 0: C:\DGI2017\DGI\REDO02.LOG
+Successful open of redo thread 1
+Mon Jun 19 14:41:43 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Mon Jun 19 14:41:43 2017
+SMON: enabling cache recovery
+Mon Jun 19 14:42:25 2017
+Successfully onlined Undo Tablespace 1.
+Mon Jun 19 14:42:25 2017
+SMON: enabling tx recovery
+Mon Jun 19 14:42:28 2017
+Database Characterset is WE8MSWIN1252
+Mon Jun 19 14:42:42 2017
+replication_dependency_tracking turned off (no async multimaster replication found)
+Mon Jun 19 14:42:58 2017
+Starting background process QMNC
+QMNC started with pid=16, OS id=4428
+Mon Jun 19 14:44:30 2017
+Completed: alter database open
+Mon Jun 19 14:44:47 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Mon Jun 19 16:20:26 2017
+MMNL absent for 4939 secs; Foregrounds taking over
+Mon Jun 19 20:47:44 2017
+MMNL absent for 10832 secs; Foregrounds taking over
+MMNL absent for 10838 secs; Foregrounds taking over
+Tue Jun 20 06:22:01 2017
+MMNL absent for 6582 secs; Foregrounds taking over
+Tue Jun 20 06:22:11 2017
+MMNL absent for 6582 secs; Foregrounds taking over
+Tue Jun 20 08:08:44 2017
+Thread 1 advanced to log sequence 13
+  Current log# 3 seq# 13 mem# 0: C:\DGI2017\DGI\REDO03.LOG

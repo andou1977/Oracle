@@ -1,0 +1,1795 @@
+Dump file c:\oracle\product\10.2.0\admin\ona\bdump\alert_ona.log
+Thu Jun 15 07:49:24 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:1139M/3818M, Ph+PgF:2126M/5674M, VA:3971M/4095M
+Thu Jun 15 07:49:24 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Shared memory segment for instance monitoring created
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=6276
+PSP0 started with pid=3, OS id=4964
+MMAN started with pid=4, OS id=6104
+DBW0 started with pid=5, OS id=8024
+LGWR started with pid=6, OS id=8168
+CKPT started with pid=7, OS id=2312
+SMON started with pid=8, OS id=7344
+RECO started with pid=9, OS id=7880
+CJQ0 started with pid=10, OS id=5344
+MMON started with pid=11, OS id=5704
+Thu Jun 15 07:49:26 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 07:49:26 2017
+starting up 1 shared server(s) ...
+MMNL started with pid=12, OS id=6700
+Thu Jun 15 07:49:28 2017
+The input backup piece C:\ORACLE\PRODUCT\10.2.0\DB_5\ASSISTANTS\DBCA\TEMPLATES\SEED_DATABASE.DFB is in compressed format.
+Full restore complete of datafile 4 to datafile copy C:\ONA2017\ONA\USERS01.DBF.  Elapsed time: 0:00:01 
+  checkpoint is 521802
+Full restore complete of datafile 2 to datafile copy C:\ONA2017\ONA\UNDOTBS01.DBF.  Elapsed time: 0:00:01 
+  checkpoint is 521802
+Thu Jun 15 07:49:54 2017
+Full restore complete of datafile 3 to datafile copy C:\ONA2017\ONA\SYSAUX01.DBF.  Elapsed time: 0:00:26 
+  checkpoint is 521802
+  last deallocation scn is 521589
+Thu Jun 15 07:50:19 2017
+Full restore complete of datafile 1 to datafile copy C:\ONA2017\ONA\SYSTEM01.DBF.  Elapsed time: 0:00:51 
+  checkpoint is 521802
+  last deallocation scn is 515202
+Thu Jun 15 07:50:21 2017
+Create controlfile reuse set database "ONA"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\ONA2017\ONA\SYSTEM01.DBF',
+'C:\ONA2017\ONA\UNDOTBS01.DBF',
+'C:\ONA2017\ONA\SYSAUX01.DBF',
+'C:\ONA2017\ONA\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\ONA2017\ONA\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\ONA2017\ONA\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\ONA2017\ONA\redo03.log') SIZE 51200K RESETLOGS
+WARNING: Default Temporary Tablespace not specified in CREATE DATABASE command
+Default Temporary Tablespace will be necessary for a locally managed database in future release
+Setting recovery target incarnation to 1
+Thu Jun 15 07:50:23 2017
+Successful mount of redo thread 1, with mount id 990174333
+Thu Jun 15 07:50:23 2017
+Completed: Create controlfile reuse set database "ONA"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\ONA2017\ONA\SYSTEM01.DBF',
+'C:\ONA2017\ONA\UNDOTBS01.DBF',
+'C:\ONA2017\ONA\SYSAUX01.DBF',
+'C:\ONA2017\ONA\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\ONA2017\ONA\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\ONA2017\ONA\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\ONA2017\ONA\redo03.log') SIZE 51200K RESETLOGS
+Shutting down instance: further logons disabled
+Thu Jun 15 07:50:23 2017
+Stopping background process CJQ0
+Thu Jun 15 07:50:24 2017
+Stopping background process MMNL
+Thu Jun 15 07:50:26 2017
+Stopping background process MMON
+Thu Jun 15 07:50:26 2017
+Shutting down instance (immediate)
+License high water mark = 1
+Thu Jun 15 07:50:26 2017
+Stopping Job queue slave processes
+Thu Jun 15 07:50:26 2017
+Job queue slave processes stopped
+Waiting for dispatcher 'D000' to shutdown
+All dispatchers and shared servers shutdown
+Thu Jun 15 07:50:27 2017
+ALTER DATABASE CLOSE NORMAL
+ORA-1109 signalled during: ALTER DATABASE CLOSE NORMAL...
+Thu Jun 15 07:50:27 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thu Jun 15 07:50:32 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  _no_recovery_through_resetlogs= TRUE
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=2804
+PSP0 started with pid=3, OS id=8144
+MMAN started with pid=4, OS id=2480
+DBW0 started with pid=5, OS id=2828
+LGWR started with pid=6, OS id=6668
+CKPT started with pid=7, OS id=7280
+SMON started with pid=8, OS id=5556
+RECO started with pid=9, OS id=7364
+MMON started with pid=10, OS id=5612
+Thu Jun 15 07:50:33 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 07:50:33 2017
+starting up 1 shared server(s) ...
+MMNL started with pid=11, OS id=6840
+Thu Jun 15 07:50:34 2017
+Create controlfile reuse set database "ONA"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\ONA2017\ONA\SYSTEM01.DBF',
+'C:\ONA2017\ONA\UNDOTBS01.DBF',
+'C:\ONA2017\ONA\SYSAUX01.DBF',
+'C:\ONA2017\ONA\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\ONA2017\ONA\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\ONA2017\ONA\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\ONA2017\ONA\redo03.log') SIZE 51200K RESETLOGS
+Thu Jun 15 07:50:34 2017
+WARNING: Default Temporary Tablespace not specified in CREATE DATABASE command
+Default Temporary Tablespace will be necessary for a locally managed database in future release
+Setting recovery target incarnation to 1
+Thu Jun 15 07:50:36 2017
+Successful mount of redo thread 1, with mount id 990165642
+Thu Jun 15 07:50:36 2017
+Completed: Create controlfile reuse set database "ONA"
+MAXINSTANCES 8
+MAXLOGHISTORY 1
+MAXLOGFILES 16
+MAXLOGMEMBERS 3
+MAXDATAFILES 100
+Datafile
+'C:\ONA2017\ONA\SYSTEM01.DBF',
+'C:\ONA2017\ONA\UNDOTBS01.DBF',
+'C:\ONA2017\ONA\SYSAUX01.DBF',
+'C:\ONA2017\ONA\USERS01.DBF'
+LOGFILE GROUP 1 ('C:\ONA2017\ONA\redo01.log') SIZE 51200K,
+GROUP 2 ('C:\ONA2017\ONA\redo02.log') SIZE 51200K,
+GROUP 3 ('C:\ONA2017\ONA\redo03.log') SIZE 51200K RESETLOGS
+Thu Jun 15 07:50:37 2017
+Stopping background process MMNL
+Thu Jun 15 07:50:38 2017
+Stopping background process MMON
+Starting background process MMON
+MMON started with pid=10, OS id=2372
+Thu Jun 15 07:50:39 2017
+Starting background process MMNL
+Thu Jun 15 07:50:39 2017
+ALTER SYSTEM enable restricted session;
+Thu Jun 15 07:50:39 2017
+alter database "ONA" open resetlogs
+Thu Jun 15 07:50:40 2017
+RESETLOGS after incomplete recovery UNTIL CHANGE 521802
+Thu Jun 15 07:50:41 2017
+Errors in file c:\oracle\product\10.2.0\admin\ona\udump\ona_ora_5560.trc:
+ORA-00313: open failed for members of log group 1 of thread 1
+ORA-00312: online log 1 thread 1: 'C:\ONA2017\ONA\REDO01.LOG'
+ORA-27041: unable to open file
+OSD-04002: unable to open file
+O/S-Error: (OS 2) The system cannot find the file specified.
+
+Thu Jun 15 07:50:41 2017
+Errors in file c:\oracle\product\10.2.0\admin\ona\udump\ona_ora_5560.trc:
+ORA-00313: open failed for members of log group 2 of thread 1
+ORA-00312: online log 2 thread 1: 'C:\ONA2017\ONA\REDO02.LOG'
+ORA-27041: unable to open file
+OSD-04002: unable to open file
+O/S-Error: (OS 2) The system cannot find the file specified.
+
+MMNL started with pid=11, OS id=1040
+Thu Jun 15 07:50:42 2017
+Errors in file c:\oracle\product\10.2.0\admin\ona\udump\ona_ora_5560.trc:
+ORA-00313: open failed for members of log group 3 of thread 1
+ORA-00312: online log 3 thread 1: 'C:\ONA2017\ONA\REDO03.LOG'
+ORA-27041: unable to open file
+OSD-04002: unable to open file
+O/S-Error: (OS 2) The system cannot find the file specified.
+
+Thu Jun 15 07:50:44 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 07:50:45 2017
+Assigning activation ID 990165642 (0x3b04ba8a)
+Thread 1 opened at log sequence 1
+  Current log# 3 seq# 1 mem# 0: C:\ONA2017\ONA\REDO03.LOG
+Successful open of redo thread 1
+Thu Jun 15 07:50:45 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 07:50:45 2017
+SMON: enabling cache recovery
+Thu Jun 15 07:50:46 2017
+Successfully onlined Undo Tablespace 1.
+Dictionary check beginning
+Tablespace 'TEMP' #3 found in data dictionary,
+but not in the controlfile. Adding to controlfile.
+Dictionary check complete
+Thu Jun 15 07:50:47 2017
+SMON: enabling tx recovery
+Thu Jun 15 07:50:47 2017
+*********************************************************************
+WARNING: The following temporary tablespaces contain no files.
+         This condition can occur when a backup controlfile has
+         been restored.  It may be necessary to add files to these
+         tablespaces.  That can be done using the SQL statement:
+ 
+         ALTER TABLESPACE <tablespace_name> ADD TEMPFILE
+ 
+         Alternatively, if these temporary tablespaces are no longer
+         needed, then they can be dropped.
+           Empty temporary tablespace: TEMP
+*********************************************************************
+Database Characterset is US7ASCII
+Threshold validation cannot be done before catproc is loaded.
+Threshold validation cannot be done before catproc is loaded.
+**********************************************************
+WARNING: Files may exists in db_recovery_file_dest
+that are not known to the database. Use the RMAN command
+CATALOG RECOVERY AREA to re-catalog any such files.
+One of the following events caused this:
+1. A backup controlfile was restored.
+2. A standby controlfile was restored.
+3. The controlfile was re-created.
+4. db_recovery_file_dest had previously been enabled and
+   then disabled.
+**********************************************************
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=15, OS id=5664
+Thu Jun 15 07:50:51 2017
+LOGSTDBY: Validating controlfile with logical metadata
+Thu Jun 15 07:50:52 2017
+LOGSTDBY: Validation complete
+Global Name changed to ONA
+Completed: alter database "ONA" open resetlogs
+Thu Jun 15 07:50:55 2017
+alter database rename global_name to "ONA"
+Completed: alter database rename global_name to "ONA"
+Thu Jun 15 07:50:56 2017
+ALTER TABLESPACE TEMP ADD TEMPFILE 'C:\ONA2017\ONA\TEMP01.DBF' SIZE 20480K REUSE AUTOEXTEND ON NEXT 640K MAXSIZE UNLIMITED
+Completed: ALTER TABLESPACE TEMP ADD TEMPFILE 'C:\ONA2017\ONA\TEMP01.DBF' SIZE 20480K REUSE AUTOEXTEND ON NEXT 640K MAXSIZE UNLIMITED
+Thu Jun 15 07:50:56 2017
+ALTER DATABASE DEFAULT TABLESPACE "USERS"
+Completed: ALTER DATABASE DEFAULT TABLESPACE "USERS"
+Thu Jun 15 07:51:04 2017
+ALTER SYSTEM disable restricted session;
+Thu Jun 15 07:51:04 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 07:51:08 2017
+Starting background process CJQ0
+CJQ0 started with pid=18, OS id=4856
+Thu Jun 15 07:51:09 2017
+The input backup piece C:\ORACLE\PRODUCT\10.2.0\DB_5\ASSISTANTS\DBCA\TEMPLATES\EXAMPLE01.DFB is in compressed format.
+Thu Jun 15 07:51:22 2017
+Full restore complete of datafile 5 to datafile copy C:\ONA2017\ONA\EXAMPLE01.DBF.  Elapsed time: 0:00:13 
+  checkpoint is 538903
+  last deallocation scn is 538486
+Thu Jun 15 07:51:26 2017
+Plug in tablespace EXAMPLE with datafile
+  'C:\ONA2017\ONA\EXAMPLE01.DBF'
+Thu Jun 15 07:52:11 2017
+ALTER TABLESPACE example READ WRITE
+Thu Jun 15 07:52:12 2017
+Completed: ALTER TABLESPACE example READ WRITE
+Thu Jun 15 07:53:56 2017
+Starting background process EMN0
+EMN0 started with pid=17, OS id=2432
+Thu Jun 15 07:53:56 2017
+Shutting down instance: further logons disabled
+Thu Jun 15 07:54:00 2017
+Stopping background process QMNC
+Thu Jun 15 07:54:01 2017
+Stopping background process CJQ0
+Thu Jun 15 07:54:02 2017
+Stopping background process MMNL
+Thu Jun 15 07:54:04 2017
+Stopping background process MMON
+Thu Jun 15 07:54:06 2017
+Shutting down instance (immediate)
+License high water mark = 5
+All dispatchers and shared servers shutdown
+Thu Jun 15 07:54:12 2017
+ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 07:54:13 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Thu Jun 15 07:54:14 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 1
+Successful close of redo thread 1
+Thu Jun 15 07:54:15 2017
+Completed: ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 07:54:15 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thu Jun 15 07:54:20 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  _no_recovery_through_resetlogs= TRUE
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=6420
+PSP0 started with pid=3, OS id=396
+MMAN started with pid=4, OS id=5256
+DBW0 started with pid=5, OS id=4460
+LGWR started with pid=6, OS id=4400
+CKPT started with pid=7, OS id=5952
+SMON started with pid=8, OS id=7360
+RECO started with pid=9, OS id=2472
+MMON started with pid=10, OS id=5116
+Thu Jun 15 07:54:21 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 07:54:21 2017
+starting up 1 shared server(s) ...
+MMNL started with pid=11, OS id=3068
+Thu Jun 15 07:54:22 2017
+ALTER DATABASE   MOUNT
+Thu Jun 15 07:54:27 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 07:54:28 2017
+Successful mount of redo thread 1, with mount id 990163822
+Thu Jun 15 07:54:28 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Thu Jun 15 07:54:29 2017
+ALTER DATABASE OPEN
+Thu Jun 15 07:54:30 2017
+Thread 1 opened at log sequence 1
+  Current log# 3 seq# 1 mem# 0: C:\ONA2017\ONA\REDO03.LOG
+Successful open of redo thread 1
+Thu Jun 15 07:54:30 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 07:54:30 2017
+SMON: enabling cache recovery
+Thu Jun 15 07:54:32 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 07:54:32 2017
+SMON: enabling tx recovery
+Thu Jun 15 07:54:33 2017
+Database Characterset is US7ASCII
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=15, OS id=6148
+Thu Jun 15 07:54:40 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 07:54:41 2017
+Completed: ALTER DATABASE OPEN
+Thu Jun 15 07:54:41 2017
+Stopping background process MMNL
+Thu Jun 15 07:54:42 2017
+Stopping background process MMON
+Starting background process MMON
+Starting background process MMNL
+Thu Jun 15 07:54:45 2017
+ALTER SYSTEM enable restricted session;
+Thu Jun 15 07:54:45 2017
+alter database character set INTERNAL_CONVERT WE8MSWIN1252
+MMON started with pid=10, OS id=7128
+MMNL started with pid=11, OS id=6960
+Thu Jun 15 07:55:03 2017
+Thread 1 advanced to log sequence 2
+  Current log# 1 seq# 2 mem# 0: C:\ONA2017\ONA\REDO01.LOG
+Thu Jun 15 07:55:08 2017
+Updating character set in controlfile to WE8MSWIN1252
+Synchronizing connection with database character set information
+Refreshing type attributes with new character set information
+Completed: alter database character set INTERNAL_CONVERT WE8MSWIN1252
+Thu Jun 15 07:55:18 2017
+alter database national character set INTERNAL_CONVERT UTF8
+Thu Jun 15 07:55:26 2017
+Completed: alter database national character set INTERNAL_CONVERT UTF8
+Thu Jun 15 07:55:26 2017
+ALTER SYSTEM disable restricted session;
+Thu Jun 15 07:55:27 2017
+Starting background process CJQ0
+CJQ0 started with pid=14, OS id=4668
+Thu Jun 15 07:55:47 2017
+Starting background process EMN0
+EMN0 started with pid=19, OS id=7380
+Thu Jun 15 07:55:48 2017
+Shutting down instance: further logons disabled
+Thu Jun 15 07:55:58 2017
+Stopping background process QMNC
+Thu Jun 15 07:55:59 2017
+Stopping background process CJQ0
+Thu Jun 15 07:55:59 2017
+Stopping background process MMNL
+Thu Jun 15 07:56:00 2017
+Stopping background process MMON
+Thu Jun 15 07:56:02 2017
+Shutting down instance (immediate)
+License high water mark = 1
+All dispatchers and shared servers shutdown
+Thu Jun 15 07:56:09 2017
+ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 07:56:09 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Thu Jun 15 07:56:10 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 2
+Successful close of redo thread 1
+Thu Jun 15 07:56:11 2017
+Completed: ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 07:56:11 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thu Jun 15 07:56:15 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=7004
+PSP0 started with pid=3, OS id=4572
+MMAN started with pid=4, OS id=2664
+DBW0 started with pid=5, OS id=7716
+LGWR started with pid=6, OS id=5352
+CKPT started with pid=7, OS id=5800
+SMON started with pid=8, OS id=6204
+RECO started with pid=9, OS id=2592
+CJQ0 started with pid=10, OS id=2492
+MMON started with pid=11, OS id=8036
+Thu Jun 15 07:56:16 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 07:56:16 2017
+starting up 1 shared server(s) ...
+MMNL started with pid=12, OS id=6608
+Thu Jun 15 07:56:18 2017
+ALTER DATABASE   MOUNT
+Thu Jun 15 07:56:24 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 07:56:25 2017
+Successful mount of redo thread 1, with mount id 990205666
+Thu Jun 15 07:56:25 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Thu Jun 15 07:56:26 2017
+ALTER DATABASE OPEN
+Thu Jun 15 07:56:29 2017
+Thread 1 opened at log sequence 2
+  Current log# 1 seq# 2 mem# 0: C:\ONA2017\ONA\REDO01.LOG
+Successful open of redo thread 1
+Thu Jun 15 07:56:29 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 07:56:29 2017
+SMON: enabling cache recovery
+Thu Jun 15 07:56:32 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 07:56:32 2017
+SMON: enabling tx recovery
+Thu Jun 15 07:56:32 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=16, OS id=4448
+Thu Jun 15 07:56:42 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 07:56:44 2017
+Completed: ALTER DATABASE OPEN
+Thu Jun 15 07:58:35 2017
+SERVER COMPONENT id=CPU_BGN: timestamp=2017-06-15 07:58:35
+Thu Jun 15 07:59:22 2017
+Thread 1 advanced to log sequence 3
+  Current log# 2 seq# 3 mem# 0: C:\ONA2017\ONA\REDO02.LOG
+Thu Jun 15 07:59:47 2017
+SERVER COMPONENT id=CATPROC: timestamp=2017-06-15 07:59:47
+Thu Jun 15 08:04:21 2017
+Thread 1 advanced to log sequence 4
+  Current log# 3 seq# 4 mem# 0: C:\ONA2017\ONA\REDO03.LOG
+Thu Jun 15 08:09:18 2017
+Thread 1 advanced to log sequence 5
+  Current log# 1 seq# 5 mem# 0: C:\ONA2017\ONA\REDO01.LOG
+Thu Jun 15 08:11:07 2017
+SERVER ACTION=CPU id=5923165: Patch2Vista
+SERVER COMPONENT id=CPU_END: timestamp=2017-06-15 08:11:07
+Thu Jun 15 08:11:10 2017
+SERVER COMPONENT id=UTLRP_BGN: timestamp=2017-06-15 08:11:10
+Thu Jun 15 08:11:39 2017
+SERVER COMPONENT id=UTLRP_END: timestamp=2017-06-15 08:11:39
+Thu Jun 15 10:44:31 2017
+Shutting down instance (abort)
+License high water mark = 20
+Instance terminated by USER, pid = 3880
+Thu Jun 15 10:44:39 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=2044
+PSP0 started with pid=3, OS id=7300
+MMAN started with pid=4, OS id=5172
+DBW0 started with pid=5, OS id=5652
+LGWR started with pid=6, OS id=1920
+CKPT started with pid=7, OS id=4600
+SMON started with pid=8, OS id=7876
+RECO started with pid=9, OS id=3688
+CJQ0 started with pid=10, OS id=4240
+MMON started with pid=11, OS id=2556
+Thu Jun 15 10:44:41 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 10:44:41 2017
+starting up 1 shared server(s) ...
+MMNL started with pid=12, OS id=7012
+Thu Jun 15 10:44:43 2017
+ALTER DATABASE   MOUNT
+Thu Jun 15 10:44:49 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 10:44:50 2017
+Successful mount of redo thread 1, with mount id 990210907
+Thu Jun 15 10:44:50 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Thu Jun 15 10:44:53 2017
+ALTER DATABASE OPEN
+Thu Jun 15 10:44:54 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Thu Jun 15 10:44:54 2017
+Started redo scan
+Thu Jun 15 10:44:55 2017
+Completed redo scan
+ 418 redo blocks read, 49 data blocks need recovery
+Thu Jun 15 10:44:55 2017
+Started redo application at
+ Thread 1: logseq 5, block 43922
+Thu Jun 15 10:44:55 2017
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 5 Reading mem 0
+  Mem# 0: C:\ONA2017\ONA\REDO01.LOG
+Thu Jun 15 10:44:55 2017
+Completed redo application
+Thu Jun 15 10:44:55 2017
+Completed crash recovery at
+ Thread 1: logseq 5, block 44340, scn 624857
+ 49 data blocks read, 49 data blocks written, 418 redo blocks read
+Thu Jun 15 10:44:58 2017
+Thread 1 advanced to log sequence 6
+Thread 1 opened at log sequence 6
+  Current log# 2 seq# 6 mem# 0: C:\ONA2017\ONA\REDO02.LOG
+Successful open of redo thread 1
+Thu Jun 15 10:44:58 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 10:44:58 2017
+SMON: enabling cache recovery
+Thu Jun 15 10:45:00 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 10:45:00 2017
+SMON: enabling tx recovery
+Thu Jun 15 10:45:01 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=18, OS id=7924
+Thu Jun 15 10:45:18 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 10:45:22 2017
+Completed: ALTER DATABASE OPEN
+Thu Jun 15 11:01:09 2017
+Shutting down instance (abort)
+License high water mark = 11
+Instance terminated by USER, pid = 1096
+Thu Jun 15 11:01:18 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=5788
+PSP0 started with pid=3, OS id=5764
+MMAN started with pid=4, OS id=5704
+DBW0 started with pid=5, OS id=6344
+CKPT started with pid=7, OS id=5084
+RECO started with pid=9, OS id=3228
+MMON started with pid=11, OS id=2684
+Thu Jun 15 11:01:19 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Thu Jun 15 11:01:19 2017
+starting up 1 shared server(s) ...
+LGWR started with pid=6, OS id=3716
+SMON started with pid=8, OS id=2140
+CJQ0 started with pid=10, OS id=1780
+Thu Jun 15 11:01:22 2017
+ALTER DATABASE   MOUNT
+MMNL started with pid=12, OS id=2680
+Thu Jun 15 11:01:26 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 11:01:26 2017
+Successful mount of redo thread 1, with mount id 990210882
+Thu Jun 15 11:01:26 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Thu Jun 15 11:01:29 2017
+ALTER DATABASE OPEN
+Thu Jun 15 11:01:30 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Thu Jun 15 11:01:31 2017
+Started redo scan
+Thu Jun 15 11:01:31 2017
+Completed redo scan
+ 3843 redo blocks read, 453 data blocks need recovery
+Thu Jun 15 11:01:31 2017
+Started redo application at
+ Thread 1: logseq 6, block 1365
+Thu Jun 15 11:01:32 2017
+Recovery of Online Redo Log: Thread 1 Group 2 Seq 6 Reading mem 0
+  Mem# 0: C:\ONA2017\ONA\REDO02.LOG
+Thu Jun 15 11:01:32 2017
+Completed redo application
+Thu Jun 15 11:01:33 2017
+Completed crash recovery at
+ Thread 1: logseq 6, block 5208, scn 646683
+ 453 data blocks read, 447 data blocks written, 3843 redo blocks read
+Thu Jun 15 11:01:36 2017
+Thread 1 advanced to log sequence 7
+Thread 1 opened at log sequence 7
+  Current log# 3 seq# 7 mem# 0: C:\ONA2017\ONA\REDO03.LOG
+Successful open of redo thread 1
+Thu Jun 15 11:01:36 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 11:01:36 2017
+SMON: enabling cache recovery
+Thu Jun 15 11:01:38 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 11:01:38 2017
+SMON: enabling tx recovery
+Thu Jun 15 11:01:38 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=18, OS id=6084
+Thu Jun 15 11:01:46 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 11:01:48 2017
+Completed: ALTER DATABASE OPEN
+Thu Jun 15 11:25:39 2017
+Starting background process EMN0
+EMN0 started with pid=20, OS id=7848
+Thu Jun 15 11:25:39 2017
+Shutting down instance: further logons disabled
+Thu Jun 15 11:25:39 2017
+Stopping background process QMNC
+Thu Jun 15 11:25:40 2017
+Stopping background process CJQ0
+Thu Jun 15 11:25:41 2017
+Stopping background process MMNL
+Thu Jun 15 11:25:43 2017
+Stopping background process MMON
+Thu Jun 15 11:25:45 2017
+Shutting down instance (immediate)
+License high water mark = 10
+Thu Jun 15 11:25:45 2017
+Stopping Job queue slave processes
+Thu Jun 15 11:25:45 2017
+Job queue slave processes stopped
+All dispatchers and shared servers shutdown
+Thu Jun 15 11:25:56 2017
+ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 11:25:57 2017
+SMON: disabling tx recovery
+SMON: disabling cache recovery
+Thu Jun 15 11:26:01 2017
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Thread 1 closed at log sequence 7
+Successful close of redo thread 1
+Thu Jun 15 11:26:11 2017
+Completed: ALTER DATABASE CLOSE NORMAL
+Thu Jun 15 11:26:11 2017
+ALTER DATABASE DISMOUNT
+Completed: ALTER DATABASE DISMOUNT
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+ARCH: Archival disabled due to shutdown: 1089
+Shutting down archive processes
+Archiving is disabled
+Archive process shutdown avoided: 0 active
+Dump file c:\oracle\product\10.2.0\admin\ona\bdump\alert_ona.log
+Thu Jun 15 15:49:10 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2522M/3818M, Ph+PgF:5621M/7018M, VA:3971M/4095M
+Thu Jun 15 15:49:10 2017
+Starting ORACLE instance (normal)
+Thu Jun 15 15:49:21 2017
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+MMAN started with pid=4, OS id=4208
+PMON started with pid=2, OS id=4180
+PSP0 started with pid=3, OS id=4188
+DBW0 started with pid=5, OS id=4220
+LGWR started with pid=6, OS id=4236
+CKPT started with pid=7, OS id=4244
+SMON started with pid=8, OS id=4268
+RECO started with pid=9, OS id=4284
+CJQ0 started with pid=10, OS id=4300
+MMON started with pid=11, OS id=4308
+Thu Jun 15 15:49:29 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=12, OS id=4356
+Thu Jun 15 15:49:29 2017
+starting up 1 shared server(s) ...
+Thu Jun 15 15:49:39 2017
+alter database mount exclusive
+Thu Jun 15 15:49:48 2017
+Setting recovery target incarnation to 2
+Thu Jun 15 15:49:52 2017
+Successful mount of redo thread 1, with mount id 990239444
+Thu Jun 15 15:49:52 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Thu Jun 15 15:49:53 2017
+alter database open
+Thu Jun 15 15:50:07 2017
+Thread 1 opened at log sequence 7
+  Current log# 3 seq# 7 mem# 0: C:\ONA2017\ONA\REDO03.LOG
+Successful open of redo thread 1
+Thu Jun 15 15:50:07 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Thu Jun 15 15:50:10 2017
+SMON: enabling cache recovery
+Thu Jun 15 15:50:38 2017
+Successfully onlined Undo Tablespace 1.
+Thu Jun 15 15:50:38 2017
+SMON: enabling tx recovery
+Thu Jun 15 15:50:44 2017
+Database Characterset is WE8MSWIN1252
+Thu Jun 15 15:51:00 2017
+replication_dependency_tracking turned off (no async multimaster replication found)
+Thu Jun 15 15:51:16 2017
+Starting background process QMNC
+QMNC started with pid=16, OS id=4824
+Thu Jun 15 15:52:41 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Thu Jun 15 15:52:42 2017
+Completed: alter database open
+Fri Jun 16 03:32:52 2017
+MMNL absent for 35986 secs; Foregrounds taking over
+Fri Jun 16 11:31:04 2017
+MMNL absent for 24351 secs; Foregrounds taking over
+Fri Jun 16 17:36:39 2017
+MMNL absent for 13192 secs; Foregrounds taking over
+Fri Jun 16 17:37:37 2017
+Thread 1 advanced to log sequence 8
+  Current log# 1 seq# 8 mem# 0: C:\ONA2017\ONA\REDO01.LOG
+Sat Jun 17 04:17:12 2017
+MMNL absent for 36745 secs; Foregrounds taking over
+Sat Jun 17 08:00:24 2017
+Thread 1 advanced to log sequence 9
+  Current log# 2 seq# 9 mem# 0: C:\ONA2017\ONA\REDO02.LOG
+Dump file c:\oracle\product\10.2.0\admin\ona\bdump\alert_ona.log
+Sat Jun 17 11:36:08 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2634M/3818M, Ph+PgF:5752M/7018M, VA:3971M/4095M
+Sat Jun 17 11:36:08 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=3328
+PSP0 started with pid=3, OS id=3388
+MMAN started with pid=4, OS id=3396
+DBW0 started with pid=5, OS id=3432
+LGWR started with pid=6, OS id=3444
+CKPT started with pid=7, OS id=3484
+SMON started with pid=8, OS id=3508
+RECO started with pid=9, OS id=3544
+CJQ0 started with pid=10, OS id=3552
+MMON started with pid=11, OS id=3600
+Sat Jun 17 11:36:22 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=12, OS id=3616
+Sat Jun 17 11:36:22 2017
+starting up 1 shared server(s) ...
+Sat Jun 17 11:36:22 2017
+alter database mount exclusive
+Sat Jun 17 11:36:27 2017
+Setting recovery target incarnation to 2
+Sat Jun 17 11:36:28 2017
+Successful mount of redo thread 1, with mount id 990374518
+Sat Jun 17 11:36:28 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Sat Jun 17 11:36:30 2017
+alter database open
+Sat Jun 17 11:36:32 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Sat Jun 17 11:36:34 2017
+Started redo scan
+Sat Jun 17 11:36:37 2017
+Completed redo scan
+ 250 redo blocks read, 73 data blocks need recovery
+Sat Jun 17 11:36:37 2017
+Started redo application at
+ Thread 1: logseq 9, block 17941
+Sat Jun 17 11:36:38 2017
+Recovery of Online Redo Log: Thread 1 Group 2 Seq 9 Reading mem 0
+  Mem# 0: C:\ONA2017\ONA\REDO02.LOG
+Sat Jun 17 11:36:38 2017
+Completed redo application
+Sat Jun 17 11:36:39 2017
+Completed crash recovery at
+ Thread 1: logseq 9, block 18191, scn 728267
+ 73 data blocks read, 73 data blocks written, 250 redo blocks read
+Sat Jun 17 11:36:50 2017
+Thread 1 advanced to log sequence 10
+Thread 1 opened at log sequence 10
+  Current log# 3 seq# 10 mem# 0: C:\ONA2017\ONA\REDO03.LOG
+Successful open of redo thread 1
+Sat Jun 17 11:36:51 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Sat Jun 17 11:36:52 2017
+SMON: enabling cache recovery
+Sat Jun 17 11:37:04 2017
+Successfully onlined Undo Tablespace 1.
+Sat Jun 17 11:37:04 2017
+SMON: enabling tx recovery
+Sat Jun 17 11:37:04 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Sat Jun 17 11:37:23 2017
+Starting background process QMNC
+QMNC started with pid=18, OS id=4164
+Sat Jun 17 11:38:18 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Sat Jun 17 11:38:19 2017
+Completed: alter database open
+Dump file c:\oracle\product\10.2.0\admin\ona\bdump\alert_ona.log
+Sat Jun 17 13:11:29 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2501M/3818M, Ph+PgF:5132M/7018M, VA:3971M/4095M
+Sat Jun 17 13:11:29 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Sat Jun 17 13:11:41 2017
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=3848
+PSP0 started with pid=3, OS id=3940
+MMAN started with pid=4, OS id=3852
+DBW0 started with pid=5, OS id=3632
+LGWR started with pid=6, OS id=3204
+CKPT started with pid=7, OS id=1984
+SMON started with pid=8, OS id=3960
+RECO started with pid=9, OS id=3804
+CJQ0 started with pid=10, OS id=3892
+MMON started with pid=11, OS id=3820
+Sat Jun 17 13:11:49 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+MMNL started with pid=12, OS id=3884
+Sat Jun 17 13:11:49 2017
+starting up 1 shared server(s) ...
+Sat Jun 17 13:11:56 2017
+alter database mount exclusive
+Sat Jun 17 13:12:05 2017
+Setting recovery target incarnation to 2
+Sat Jun 17 13:12:07 2017
+Successful mount of redo thread 1, with mount id 990379741
+Sat Jun 17 13:12:07 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Sat Jun 17 13:12:07 2017
+alter database open
+Sat Jun 17 13:12:13 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Sat Jun 17 13:12:18 2017
+Started redo scan
+Sat Jun 17 13:12:20 2017
+Completed redo scan
+ 1477 redo blocks read, 317 data blocks need recovery
+Sat Jun 17 13:12:21 2017
+Started redo application at
+ Thread 1: logseq 10, block 11000
+Sat Jun 17 13:12:22 2017
+Recovery of Online Redo Log: Thread 1 Group 3 Seq 10 Reading mem 0
+  Mem# 0: C:\ONA2017\ONA\REDO03.LOG
+Sat Jun 17 13:12:22 2017
+Completed redo application
+Sat Jun 17 13:12:23 2017
+Completed crash recovery at
+ Thread 1: logseq 10, block 12477, scn 754195
+ 317 data blocks read, 317 data blocks written, 1477 redo blocks read
+Sat Jun 17 13:12:35 2017
+Thread 1 advanced to log sequence 11
+Thread 1 opened at log sequence 11
+  Current log# 1 seq# 11 mem# 0: C:\ONA2017\ONA\REDO01.LOG
+Successful open of redo thread 1
+Sat Jun 17 13:12:37 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Sat Jun 17 13:12:39 2017
+SMON: enabling cache recovery
+Sat Jun 17 13:13:00 2017
+Successfully onlined Undo Tablespace 1.
+Sat Jun 17 13:13:00 2017
+SMON: enabling tx recovery
+Sat Jun 17 13:13:03 2017
+Database Characterset is WE8MSWIN1252
+Sat Jun 17 13:13:15 2017
+replication_dependency_tracking turned off (no async multimaster replication found)
+Sat Jun 17 13:13:28 2017
+Starting background process QMNC
+QMNC started with pid=18, OS id=4736
+Sat Jun 17 13:14:49 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Sat Jun 17 13:14:50 2017
+Completed: alter database open
+Sun Jun 18 04:28:38 2017
+MMNL absent for 54463 secs; Foregrounds taking over
+Sun Jun 18 04:28:43 2017
+MMNL absent for 54463 secs; Foregrounds taking over
+MMNL absent for 54470 secs; Foregrounds taking over
+MMNL absent for 54470 secs; Foregrounds taking over
+Dump file c:\oracle\product\10.2.0\admin\ona\bdump\alert_ona.log
+Sun Jun 18 07:38:59 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2518M/3818M, Ph+PgF:5803M/7658M, VA:3971M/4095M
+Sun Jun 18 07:38:59 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+Sun Jun 18 07:39:10 2017
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=964
+PSP0 started with pid=3, OS id=3084
+MMAN started with pid=4, OS id=2728
+DBW0 started with pid=5, OS id=3372
+LGWR started with pid=6, OS id=3248
+CKPT started with pid=7, OS id=3272
+SMON started with pid=8, OS id=4012
+RECO started with pid=9, OS id=3996
+CJQ0 started with pid=10, OS id=808
+MMON started with pid=11, OS id=3388
+MMNL started with pid=12, OS id=2668
+Sun Jun 18 07:39:20 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+Sun Jun 18 07:39:29 2017
+alter database mount exclusive
+Sun Jun 18 07:39:36 2017
+Setting recovery target incarnation to 2
+Sun Jun 18 07:39:38 2017
+Successful mount of redo thread 1, with mount id 990450801
+Sun Jun 18 07:39:38 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Sun Jun 18 07:39:39 2017
+alter database open
+Sun Jun 18 07:39:43 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Sun Jun 18 07:39:46 2017
+Started redo scan
+Sun Jun 18 07:39:48 2017
+Completed redo scan
+ 342 redo blocks read, 113 data blocks need recovery
+Sun Jun 18 07:39:48 2017
+Started redo application at
+ Thread 1: logseq 11, block 37356
+Sun Jun 18 07:39:49 2017
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 11 Reading mem 0
+  Mem# 0: C:\ONA2017\ONA\REDO01.LOG
+Sun Jun 18 07:39:49 2017
+Completed redo application
+Sun Jun 18 07:39:50 2017
+Completed crash recovery at
+ Thread 1: logseq 11, block 37698, scn 788150
+ 113 data blocks read, 113 data blocks written, 342 redo blocks read
+Sun Jun 18 07:40:01 2017
+Thread 1 advanced to log sequence 12
+Thread 1 opened at log sequence 12
+  Current log# 2 seq# 12 mem# 0: C:\ONA2017\ONA\REDO02.LOG
+Successful open of redo thread 1
+Sun Jun 18 07:40:01 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Sun Jun 18 07:40:03 2017
+SMON: enabling cache recovery
+Sun Jun 18 07:40:29 2017
+Successfully onlined Undo Tablespace 1.
+Sun Jun 18 07:40:29 2017
+SMON: enabling tx recovery
+Sun Jun 18 07:40:34 2017
+Database Characterset is WE8MSWIN1252
+Sun Jun 18 07:40:49 2017
+replication_dependency_tracking turned off (no async multimaster replication found)
+Sun Jun 18 07:41:04 2017
+Starting background process QMNC
+QMNC started with pid=18, OS id=4940
+Sun Jun 18 07:42:09 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Sun Jun 18 07:42:14 2017
+Completed: alter database open
+Sun Jun 18 13:37:13 2017
+MMNL absent for 20020 secs; Foregrounds taking over
+Sun Jun 18 16:40:16 2017
+MMNL absent for 7240 secs; Foregrounds taking over
+Sun Jun 18 19:58:54 2017
+MMNL absent for 9807 secs; Foregrounds taking over
+MMNL absent for 9811 secs; Foregrounds taking over
+MMNL absent for 9812 secs; Foregrounds taking over
+Mon Jun 19 06:05:19 2017
+MMNL absent for 25016 secs; Foregrounds taking over
+MMNL absent for 25025 secs; Foregrounds taking over
+MMNL absent for 25025 secs; Foregrounds taking over
+Mon Jun 19 09:49:43 2017
+Shutting down instance (abort)
+License high water mark = 19
+Instance terminated by USER, pid = 948
+Mon Jun 19 09:49:52 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=8700
+PSP0 started with pid=3, OS id=8868
+MMAN started with pid=4, OS id=5380
+DBW0 started with pid=5, OS id=6024
+SMON started with pid=8, OS id=9712
+Mon Jun 19 09:49:58 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Mon Jun 19 09:49:58 2017
+starting up 1 shared server(s) ...
+LGWR started with pid=6, OS id=9580
+MMON started with pid=11, OS id=9308
+CKPT started with pid=7, OS id=5832
+CJQ0 started with pid=10, OS id=3304
+RECO started with pid=9, OS id=7304
+Mon Jun 19 09:50:01 2017
+ALTER DATABASE   MOUNT
+MMNL started with pid=12, OS id=7788
+Mon Jun 19 09:50:07 2017
+Setting recovery target incarnation to 2
+Mon Jun 19 09:50:08 2017
+Successful mount of redo thread 1, with mount id 990589066
+Mon Jun 19 09:50:08 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Mon Jun 19 09:50:09 2017
+ALTER DATABASE OPEN
+Mon Jun 19 09:50:09 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Mon Jun 19 09:50:12 2017
+Started redo scan
+Mon Jun 19 09:50:13 2017
+Completed redo scan
+ 483 redo blocks read, 115 data blocks need recovery
+Mon Jun 19 09:50:14 2017
+Started redo application at
+ Thread 1: logseq 12, block 81247
+Mon Jun 19 09:50:15 2017
+Recovery of Online Redo Log: Thread 1 Group 2 Seq 12 Reading mem 0
+  Mem# 0: C:\ONA2017\ONA\REDO02.LOG
+Mon Jun 19 09:50:15 2017
+Completed redo application
+Mon Jun 19 09:50:16 2017
+Completed crash recovery at
+ Thread 1: logseq 12, block 81730, scn 840917
+ 115 data blocks read, 115 data blocks written, 483 redo blocks read
+Mon Jun 19 09:50:25 2017
+Thread 1 advanced to log sequence 13
+Thread 1 opened at log sequence 13
+  Current log# 3 seq# 13 mem# 0: C:\ONA2017\ONA\REDO03.LOG
+Successful open of redo thread 1
+Mon Jun 19 09:50:26 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Mon Jun 19 09:50:27 2017
+SMON: enabling cache recovery
+Mon Jun 19 09:50:29 2017
+Successfully onlined Undo Tablespace 1.
+Mon Jun 19 09:50:29 2017
+SMON: enabling tx recovery
+Mon Jun 19 09:50:29 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=18, OS id=6196
+Mon Jun 19 09:50:41 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Mon Jun 19 09:50:41 2017
+Completed: ALTER DATABASE OPEN
+Mon Jun 19 12:19:35 2017
+MMNL absent for 7766 secs; Foregrounds taking over
+Mon Jun 19 13:26:06 2017
+MMNL absent for 2124 secs; Foregrounds taking over
+Dump file c:\oracle\product\10.2.0\admin\ona\bdump\alert_ona.log
+Mon Jun 19 14:40:48 2017
+ORACLE V10.2.0.3.0 - Production vsnsta=0
+vsnsql=14 vsnxtr=3
+Windows NT Version V6.2 
+CPU                 : 2 - type 586, 2 Physical Cores
+Process Affinity    : 0x00000000
+Memory (Avail/Total): Ph:2861M/3818M, Ph+PgF:7417M/8426M, VA:3971M/4095M
+Mon Jun 19 14:40:48 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=2684
+PSP0 started with pid=3, OS id=2516
+MMAN started with pid=4, OS id=3008
+DBW0 started with pid=5, OS id=2668
+LGWR started with pid=6, OS id=2604
+CKPT started with pid=7, OS id=2424
+SMON started with pid=8, OS id=2984
+RECO started with pid=9, OS id=2848
+CJQ0 started with pid=10, OS id=2628
+MMON started with pid=11, OS id=1364
+Mon Jun 19 14:40:57 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+Mon Jun 19 14:40:57 2017
+starting up 1 shared server(s) ...
+MMNL started with pid=12, OS id=2944
+Mon Jun 19 14:41:17 2017
+alter database mount exclusive
+Mon Jun 19 14:41:25 2017
+Setting recovery target incarnation to 2
+Mon Jun 19 14:41:29 2017
+Successful mount of redo thread 1, with mount id 990571469
+Mon Jun 19 14:41:29 2017
+Database mounted in Exclusive Mode
+Completed: alter database mount exclusive
+Mon Jun 19 14:41:32 2017
+alter database open
+Mon Jun 19 14:41:35 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Mon Jun 19 14:41:39 2017
+Started redo scan
+Mon Jun 19 14:41:41 2017
+Completed redo scan
+ 1971 redo blocks read, 386 data blocks need recovery
+Mon Jun 19 14:41:41 2017
+Started redo application at
+ Thread 1: logseq 13, block 7699
+Mon Jun 19 14:41:43 2017
+Recovery of Online Redo Log: Thread 1 Group 3 Seq 13 Reading mem 0
+  Mem# 0: C:\ONA2017\ONA\REDO03.LOG
+Mon Jun 19 14:41:44 2017
+Completed redo application
+Mon Jun 19 14:41:46 2017
+Completed crash recovery at
+ Thread 1: logseq 13, block 9670, scn 865272
+ 386 data blocks read, 386 data blocks written, 1971 redo blocks read
+Mon Jun 19 14:41:53 2017
+Thread 1 advanced to log sequence 14
+Thread 1 opened at log sequence 14
+  Current log# 1 seq# 14 mem# 0: C:\ONA2017\ONA\REDO01.LOG
+Successful open of redo thread 1
+Mon Jun 19 14:41:53 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Mon Jun 19 14:41:53 2017
+SMON: enabling cache recovery
+Mon Jun 19 14:42:20 2017
+Successfully onlined Undo Tablespace 1.
+Mon Jun 19 14:42:20 2017
+SMON: enabling tx recovery
+Mon Jun 19 14:42:23 2017
+Database Characterset is WE8MSWIN1252
+Mon Jun 19 14:42:38 2017
+replication_dependency_tracking turned off (no async multimaster replication found)
+Mon Jun 19 14:42:50 2017
+Starting background process QMNC
+QMNC started with pid=18, OS id=4992
+Mon Jun 19 14:44:17 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Mon Jun 19 14:44:19 2017
+Completed: alter database open
+Mon Jun 19 16:20:24 2017
+MMNL absent for 4937 secs; Foregrounds taking over
+MMNL absent for 4943 secs; Foregrounds taking over
+MMNL absent for 4945 secs; Foregrounds taking over
+Mon Jun 19 20:47:44 2017
+MMNL absent for 10836 secs; Foregrounds taking over
+Tue Jun 20 06:22:03 2017
+MMNL absent for 6585 secs; Foregrounds taking over
+Tue Jun 20 09:14:05 2017
+Shutting down instance (abort)
+License high water mark = 18
+Instance terminated by USER, pid = 2316
+Tue Jun 20 09:14:10 2017
+Starting ORACLE instance (normal)
+LICENSE_MAX_SESSION = 0
+LICENSE_SESSIONS_WARNING = 0
+Picked latch-free SCN scheme 2
+Using LOG_ARCHIVE_DEST_10 parameter default value as USE_DB_RECOVERY_FILE_DEST
+Autotune of undo retention is turned on. 
+IMODE=BR
+ILAT =18
+LICENSE_MAX_USERS = 0
+SYS auditing is disabled
+ksdpec: called for event 13740 prior to event group initialization
+Starting up ORACLE RDBMS Version: 10.2.0.3.0.
+System parameters with non-default values:
+  processes                = 150
+  __shared_pool_size       = 276824064
+  __large_pool_size        = 8388608
+  __java_pool_size         = 25165824
+  __streams_pool_size      = 0
+  sga_target               = 1174405120
+  control_files            = C:\ONA2017\ONA\CONTROL01.CTL, C:\ONA2017\ONA\CONTROL02.CTL, C:\ONA2017\ONA\CONTROL03.CTL
+  db_block_size            = 8192
+  __db_cache_size          = 855638016
+  compatible               = 10.2.0.3.0
+  db_file_multiblock_read_count= 16
+  db_recovery_file_dest    = C:\oracle\product\10.2.0\flash_recovery_area
+  db_recovery_file_dest_size= 2147483648
+  undo_management          = AUTO
+  undo_tablespace          = UNDOTBS1
+  remote_login_passwordfile= EXCLUSIVE
+  db_domain                = 
+  dispatchers              = (PROTOCOL=TCP) (SERVICE=ONAXDB)
+  local_listener           = LISTENER_ONA
+  job_queue_processes      = 10
+  audit_file_dest          = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\ADUMP
+  background_dump_dest     = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\BDUMP
+  user_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\UDUMP
+  core_dump_dest           = C:\ORACLE\PRODUCT\10.2.0\ADMIN\ONA\CDUMP
+  db_name                  = ONA
+  open_cursors             = 300
+  pga_aggregate_target     = 389021696
+PMON started with pid=2, OS id=8104
+PSP0 started with pid=3, OS id=8512
+MMAN started with pid=4, OS id=8084
+DBW0 started with pid=5, OS id=4336
+RECO started with pid=9, OS id=2152
+LGWR started with pid=6, OS id=8928
+MMON started with pid=11, OS id=3312
+CKPT started with pid=7, OS id=7312
+Tue Jun 20 09:14:21 2017
+starting up 1 dispatcher(s) for network address '(ADDRESS=(PARTIAL=YES)(PROTOCOL=TCP))'...
+starting up 1 shared server(s) ...
+SMON started with pid=8, OS id=7516
+MMNL started with pid=12, OS id=880
+CJQ0 started with pid=10, OS id=2020
+Tue Jun 20 09:14:24 2017
+ALTER DATABASE   MOUNT
+Tue Jun 20 09:14:29 2017
+Setting recovery target incarnation to 2
+Tue Jun 20 09:14:29 2017
+Successful mount of redo thread 1, with mount id 990686640
+Tue Jun 20 09:14:29 2017
+Database mounted in Exclusive Mode
+Completed: ALTER DATABASE   MOUNT
+Tue Jun 20 09:14:32 2017
+ALTER DATABASE OPEN
+Tue Jun 20 09:14:33 2017
+Beginning crash recovery of 1 threads
+ parallel recovery started with 2 processes
+Tue Jun 20 09:14:34 2017
+Started redo scan
+Tue Jun 20 09:14:35 2017
+Completed redo scan
+ 120 redo blocks read, 27 data blocks need recovery
+Tue Jun 20 09:14:35 2017
+Started redo application at
+ Thread 1: logseq 14, block 76965
+Tue Jun 20 09:14:36 2017
+Recovery of Online Redo Log: Thread 1 Group 1 Seq 14 Reading mem 0
+  Mem# 0: C:\ONA2017\ONA\REDO01.LOG
+Tue Jun 20 09:14:36 2017
+Completed redo application
+Tue Jun 20 09:14:36 2017
+Completed crash recovery at
+ Thread 1: logseq 14, block 77085, scn 906436
+ 27 data blocks read, 27 data blocks written, 120 redo blocks read
+Tue Jun 20 09:14:38 2017
+Thread 1 advanced to log sequence 15
+Thread 1 opened at log sequence 15
+  Current log# 2 seq# 15 mem# 0: C:\ONA2017\ONA\REDO02.LOG
+Successful open of redo thread 1
+Tue Jun 20 09:14:38 2017
+MTTR advisory is disabled because FAST_START_MTTR_TARGET is not set
+Tue Jun 20 09:14:38 2017
+SMON: enabling cache recovery
+Tue Jun 20 09:14:41 2017
+Successfully onlined Undo Tablespace 1.
+Tue Jun 20 09:14:41 2017
+SMON: enabling tx recovery
+Tue Jun 20 09:14:42 2017
+Database Characterset is WE8MSWIN1252
+replication_dependency_tracking turned off (no async multimaster replication found)
+Starting background process QMNC
+QMNC started with pid=18, OS id=4920
+Tue Jun 20 09:14:51 2017
+db_recovery_file_dest_size of 2048 MB is 0.00% used. This is a
+user-specified limit on the amount of space that will be used by this
+database for recovery-related files, and does not reflect the amount of
+space available in the underlying filesystem or ASM diskgroup.
+Tue Jun 20 09:14:52 2017
+Completed: ALTER DATABASE OPEN

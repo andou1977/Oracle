@@ -1,0 +1,121 @@
+grant connect, resource, dba to opens identified by opens;
+Create tablespace tsrh datafile
+'C:\PROJET\data01.dbf' size 3M;
+Alter user opens default tablespace tsrh;
+disconnect
+conn opens/opens
+create table EMP (
+empid varchar2(9) Primary key,
+nom  varchar2(20),
+prenom  varchar2(30),
+dept  varchar2(30),
+salaire  float) ;
+
+create sequence compter start with 1 increment by 1;
+
+create or replace procedure ajoutemp (
+Vnom varchar2, Vprenom varchar2, Vdept  varchar2,
+Vsalaire float)
+IS
+BEGIN
+insert into EMP (empid, nom, prenom, dept, salaire)  values (compter.nextval , Vnom, Vprenom, Vdept, Vsalaire);
+END;
+/
+
+exec  ajoutemp ('Adolphe ',  ' Weekend-Dolphe', 'ADM', 20000);
+exec  ajoutemp (' Alcindor ',  ' Losthelven', ' SEC ', 10000);
+exec  ajoutemp (' Alexis ',  ' Jean Gariel’, ' STO ', 5000);
+execute ajoutemp('Andou','Emmanuel','ADM',18000);
+execute ajoutemp('Augustin','Anchise','MGR',50000);
+execute ajoutemp('Beliscar','Fabiola','SEC',7000);
+execute ajoutemp('Bien-Aimable','David','MGR',60000);
+execute ajoutemp('Bien-Aime','Audisson','STO',4500);
+execute ajoutemp('Charles','Herby','GAR',3000);
+execute ajoutemp('David','Ricardo','ADM',12000);
+execute ajoutemp('Denis','Pierre Richard','ADM',13000);
+execute ajoutemp('Dervis','Youbenta','SEC',8000);
+execute ajoutemp('Dorvelus','Wilker','STO',4500);
+execute ajoutemp('Dumai','Pierre Winzor Diego','GAR',3000);
+execute ajoutemp('Fenelon','Darline','SEC',7000);
+execute ajoutemp('Hyppolite','Jean-Rolner','ADM',17000);
+execute ajoutemp('Janvier','Rose Darline','STO',4000);
+execute ajoutemp('Jean','Eddy','GAR',3800);
+execute ajoutemp('Joseph','Jackson Serge','MGR',60000);
+execute ajoutemp('Joseph','Francois','MGR',65000);
+execute ajoutemp('Justin','Macelo','ADM',20000);
+execute ajoutemp('Louis','John-Merlin','SEC',7000);
+
+execute ajoutemp('Andou','Emmanuel','ADM',18000);
+execute ajoutemp('Augustin','Anchise','MGR',50000);
+execute ajoutemp('Beliscar','Fabiola','SEC',7000);
+execute ajoutemp('Bien-Aimable','David','MGR',60000);
+execute ajoutemp('Bien-Aime','Audisson','STO',4500);
+execute ajoutemp('Charles','Herby','GAR',3000);
+execute ajoutemp('David','Ricardo','ADM',12000);
+execute ajoutemp('Denis','Pierre Richard','ADM',13000);
+execute ajoutemp('Dervis','Youbenta','SEC',8000);
+execute ajoutemp('Dorvelus','Wilker','STO',4500);
+execute ajoutemp('Dumai','Pierre Winzor Diego','GAR',3000);
+execute ajoutemp('Fenelon','Darline','SEC',7000);
+execute ajoutemp('Hyppolite','Jean-Rolner','ADM',17000);
+execute ajoutemp('Janvier','Rose Darline','STO',4000);
+execute ajoutemp('Jean','Eddy','GAR',3800);
+execute ajoutemp('Joseph','Jackson Serge','MGR',60000);
+execute ajoutemp('Joseph','Francois','MGR',65000);
+execute ajoutemp('Justin','Macelo','ADM',20000);
+execute ajoutemp('Louis','John-Merlin','SEC',7000);
+
+CREATE OR REPLACE FUNCTION rechsal
+(
+pempid number
+)
+return float
+is rechsal float;
+begin 
+select salaire into rechsal from emp where empid =pempid;
+return rechsal;
+end;
+/
+select rechsal('8') from dual;
+
+DECLARE
+  CURSOR mesemp IS
+   SELECT * FROM Emp
+   WHERE Dept = 'ADM';
+  mes_emp emp%ROWTYPE;
+BEGIN
+  OPEN mesemp;
+  LOOP
+    FETCH mesemp INTO mes_emp;
+    DBMS_OUTPUT.PUT_LINE(mes_emp.salaire);
+    EXIT WHEN mesemp%NOTFOUND;
+   END LOOP;
+  CLOSE mesemp;
+END;
+/
+
+Partie II
+Create user paul identified by pass;
+Grant connect,resource,dba to paul;
+
+Create public database link  Rhumaines
+connect to OPENS identified by opens 
+using 'Rhumaines';
+
+Create public synonym Emp for OPENS.Emp @Rhumaines;
+
+ Insert into opens.Emp@Rhumaines values
+   (compter.nextval@Rhumaines,'Jean','Alexis','MGR',90000);
+
+Drop public database link Rhumaines;
+
+select *from opens.emp@rhumaines;
+
+select *from dba_db_links;
+select owner,db_link,username from dba_db_links;
+
+set serveroutput on;
+
+select file_name, tablespace_name, bytes, file_id from dba_data_files;
+
+

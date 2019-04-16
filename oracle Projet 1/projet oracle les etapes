@@ -1,0 +1,124 @@
+projet oracle
+1-je dois creer le repertoire DGI2017 dans l'emplacement C
+2-je lance command prompt en mode administrateur
+3-je tape dbca
+4-l'interface de configuration de base de donnees apparait 
+5-suivant
+6-je coche (creer une base de donnees)
+7-suivant
+8-je choisis usage general
+9-suivant
+10-je tape le SID de la base (DGI)
+11-suivant
+12-je passe l'autre etape en cliquant sur suivant
+13-je tape le mot de passe et le confirme
+14-suivant
+15-je choisis systeme de fichiers
+16-suivant 
+17-je choisis (utiliser un emplacement commun pour tous les fichiers de base de donnees)
+18-je parcours l'emplacement des fichiers de base de donnees desiré
+19-suivant
+20-je choisis l'emplacement de recuperation rapide et mode d'archive
+21-suivant
+22-l'interface de shema apparait
+23-suivant
+24-je choisis jeux de caractere utf-8, je choisis mode partagé 
+25-suivant
+26-je configure le nombre maximal de donnees et autre
+27-suivant
+28-je choisis le repertoire de destination
+29-je clique sur terminer
+30-l'affichage des informations sur la base de donnees apparait
+31-ok
+32-j'attends la creation de la base 
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+set oracle_sid=DGI
+sqlplus sys/pass as sysdba
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+1-B-REPONSE
+create user caisse identified by pass password expire;
+grant connect, resource, dba to caisse identified by pass;
+
+1-C-REPONSE
+create tablespace TSDGI datafile 'c:\DGI2017\data01.dbf' size 2M,'c:\DGI2017\data02.dbf' size 3M;
+
+1-D-REPONSE
+alter TableSpace TSDGI add datafile 'c:\DGI2017\data03.dbf' size 1M;
+
+1-E-REPONSE
+ALTER DATABASE DATAFILE 'c:\DGI2017\data01.dbf' RESIZE 7M;
+
+1-F-REPONSE
+alter user caisse default tablespace TSDGI;
+
+/////////////////////////////////////
+**********connect caisse/pass
+1-G-REPONSE
+create table citoyen(
+  Noidentite NUMBER(10) NOT NULL ,
+  nom varchar2(20) NOT NULL,
+  prenom varchar2(20) NOT NULL,
+  Adresse varchar2(20) NOT NULL
+   );
+create sequence compter start with 1 increment by 1 ; 
+	
+
+Insert into citoyen values(compter.nextval,'Bastien','jacques','3 route de delmas');
+Insert into citoyen values(compter.nextval,'Andre','Martine','4 Rue Waag');
+Insert into citoyen values(compter.nextval,'Joseph','Paula','Turgeau 10');
+Insert into citoyen values(compter.nextval,'Osorie','O''Hara','Rue Petion 12');
+
+
+**********drop table citoyen;
+
+
+1-H-REPONSE
+pour effacer le datafile, il faut arreter le listener
+
+apres avoir effacé le datafile, il faut redemarrer le listener dans services.msc 
+ensuite on se connecte à la base, et en faisant desc dict, cela va nous generer l'erreur suivante:objet dict inexistant
+et on fait startup force pour essayer de demarrer le listener, cela ne marche pas et genere cette erreur:
+								impossible d'identifier ou de verrouiller le fichier de donnÚes 5 -
+								voir le fichier de trace DBWR
+								ORA-01110: fichier de donnÚes 5 : 'C:\DGI2017\DATA01.DBF'
+
+et on passe la commande suivante pour recreer le datafile data01.dbf dans le repertoire DGI2017:
+								alter database create datafile 'C:\DGI2017\data01.DBF';
+								//la base de donnees est modifiée
+le datafile est recréé, et on passe la commande:
+								startup force
+et on procede a faire la recuperation apres defaillance du fichier:
+				recover database;
+//et la recuperation se fait normalement
+on redemarre le listener,en executant la commande:
+								startup force
+et on fait: desc dict pour voir si la base marche bien
+
+
+1-J-REPONSE
+//on cree l'user caisse2
+create user caisse2 identified by pass password expire;
+	//attribution des privileges
+grant connect, resource, dba to caisse2 identified by pass;
+    //attribution de tablespace par defaut
+alter user caisse2 default tablespace TSDGI;
+//connection de l'utilisateur caisse
+connect caisse/pass
+//privileges attribués de l'utilisateur caisse a caisse2 afin de lire dans ses fichiers
+   grant select on citoyen to caisse2;
+   	//connection de caisse2
+connect caisse2/pass
+//lecture des fichiers 
+select * from caisse.citoyen;
+
+2-B-REPONSE
+create public database link ona
+connect to
+opens
+identified by 
+pass
+using 'DGI';
+select * from opens.citoyen@DGI;
+Database Link
+ 

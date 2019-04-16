@@ -1,0 +1,592 @@
+Oracle Database Server Administration
+------------------------------------
+
+Rappel:
+ -Oracle cie qui developpe une suite d'application
+	*Oracle forms, Oracle report, Oracle App. Server
+	*Oracle Database Server (un SGBD, logiciel qui permet de gerer les BDs)
+
+Bd: Ensemble de fichier contenant des informations
+
+Oracle est une BD relationnelle (tables=lignes et colonnes)
+
+Pour qu'un logiciel soit un SGBD Relationnel, il faut qu'il obeisse aux regles de Franck CODD
+12 regles(Cle primaire, secondaire, contrainte d'integrite, .... , etc..)
+
+Apprendre Oracle implique 3 metiers
+	*DBA=Database Admnistrator Paul eddy bernard
+	*Audit Officier
+	*Oracle Developper(Bigup,Witzer)
+
+Administration Oracle (DBA)
+
+Resultats Attendus
+------------------------------------
+*installation (linux,windows, Mac Os)
+
+version??? 4,5,6,7,8i,9g,10g,11g,12c
+Passer de version X a Y(Upgrade)
+descendre de y vers x(downgrade)
+Pour passer de version inferieure a superieure, il faut utiliser dans Oracle le programme
+DBUA, Database Upgrade Assistant
+Pour creer une BD, on se sert de DBCA, Database Configuration Assistant
+
+* Desinstallation
+
+* Manipulation des Utilisateurs(creer, privileges, Roles, Profile)
+
+* Quel est le nom de l'administrateur d'une BD Oracle
+	Sys
+	System
+	Sysman etc....
+* Espace de Stockage des donnees d'Oracle : TableSpace
+	-Avant de mettre des donnees dans Oracle, il faut creer un TableSpace
+	-1 tablespace contient 1 ou plusieurs datafiles
+
+Oracle possede des outils d'administration:
+	Enterprise Manager, Oracle developper, ToAd, ils sont graphics
+
+* Architecture d'Oracle
+* Fonctionnement d'Oracle
+* Structure physique et logique d'Oracle
+* comprendre les options d'oracle
+* Backup physique et logique
+* Simulation de panne
+* Programmation en Oracle avec PL/SQL=Programming Language Structured Query Language
+
+en installant Oracle pour la premiere fois, il faut respecter certains parametres
+	* Type de BD(OLTP transaction et OLAP datawarehouse (entrepot de donnees))
+	* Type de serveur: Dedié ou Partagé
+	* Character set
+
+comment savoir combien de BDs il y a sur une machine?
+lsnrctl->status
+ou services.msc
+
+comment verifier que la base fonctionne?
+	*Listener fonctionne tnsping Orcl
+	*lsnrctl
+	*services.msc
+	*tnsping Orcl
+
+Le dictionnaire d'Oracle est la table qui contient tous les objets d'une(tables, vues,  etc..)
+
+Fermer la base 
+* shutdown
+* shutdown abort
+* shutdown transactional
+* shutdown immediate
+
+Demarrer une base
+---------------------
+il y a 3 etapes:
+	-demarrer instance
+	-monter base(ouvrir les fichiers de controle)
+	-ouvrir base
+
+NB:oracle utilise 40% de RAM
+
+Dearrer base par morceau (pap palier)
+	-set oracle_sid=orcl
+	-sqlplus/nolog
+	-connect sys/pass as sysdba
+	-shutdown abort 
+	-startup nomount -instance demaree
+	-alter database mount;
+	-alter database open;
+
+creer user
+--------------
+	create user william identified by pass;
+donner privilege a user
+-----------------------
+grant connect, ressource, dba to william; 
+
+-creation et donnation de privilege a un user
+----------------------------------------------
+grant connect, resource, dba to roody identified by secret;
+grant connect, resource, dba to caisse identified by pass;
+
+
+pour qu'un utilisateur change son mot de passe:
+ 	password
+
+meilleure facon pour creer un user:
+-------------------------------------
+create user caisse identified by pass password expire;
+
+pour qu'un DBA change le mot de passe d'un user
+------------------------------------------------
+alter user roody identified by pasteur;
+
+
+27/01/2016
+----------------------------
+A. combien de bases il ya sur ue machine?
+rep.	1- en mode prompt as administrator, taper lnsrctl, status
+		2- dbca 
+		3- services.msc
+B. cmt savoir si une base marche ou pas? 
+rep. 	1- si listener marche
+		2- verifier que l'instance liée a la base march. Ex. pour une BD HUEH
+			verifier que OracleServiceHUEH fonctionne cmt?
+			services.msc
+C. Acceder a HUEH 
+	set oracle_sid=hueh
+	sqlplus sys/secret enter
+	 sys as sysdba
+	 pwd
+	 2ieme facon
+	 set oracle_sid=hueh
+	 sqlplus /nolog
+	 connect sys/secret as sysdba
+
+D. combien de tables se trouvant dans le shema de los?
+	1- en tant que los 
+		desc user_tables
+		select table_name from user_tables;
+	2- en tant que dba (SYS)
+		desc dba_tables
+		select table_name from dba_tables where
+		owner ='LOS';
+
+		KEYLOGGER permet de controler toutes les transactions d'un appareil(ordinateur,telephone)
+		craquer Wifi, wireshark
+E. creer un folder en DOS
+	md\nomfolder
+	entrer au folder: cd\nomfolder
+F. creer tablespace tsdata avec 2 datafiles datos1 2M,datos2 3M
+	create tablespace tsdata 
+	datafile 'c:\datawork\datos1.dbf' size 2M,
+	 'c:\datawork\datos2.dbf' size 3M;
+
+create tablespace TSDGI 
+	datafile 'c:\DGI2017\data01.dbf' size 2M,
+	 'c:\DGI2017\data02.dbf' size 3M;
+	select file_name, tablespace_name, bytes/1024/1024 from dba_data_files
+
+
+pour verifier les users qui se connectent a une base:
+		desc dba_users
+puis, on tape:
+				select username from dba_users;
+
+debloquer un user:
+	alter user nom account unlock;
+
+connaitre les objets a l'interieur d'un utilisateur
+	connect nomuser/pass as sysdba
+	select * from tabs;
+
+ajouter data05.dbf dans tsfin
+	alter tablespace tsfin add datafile 'c:\dictio\data05.dbf' size 5M; 
+
+
+	pour verifier qu'une base est en mode d'archive
+	select log_mode from v$database
+
+le numero unique d'une bd
+	select dbid from v$database (tres important, si on oublie ce numero, on ne pourra pas recuperer les donnees en cas de defaillance(crash)
+
+	combien de type de fichiers il y a dans un base?
+		1-fichier de controle
+		2-fichier redo log (.log)
+		3-fichier de donnees(.dbf)
+		4-fichier de parametre spfileNOM.ora
+		il sert a initialiser la base
+backup
+-------------
+1-backup physique(control,redo,datafile,fichier parametre) se fait par un programme RMAN(recover manager)
+		en mode prompt 
+		set oracle_sid=hueh
+		rman target sys/pass(seulement le user sys peut faire de backup)
+
+		pour savoir ou oracle fait la sauvegarde 
+			show parameter recovery
+
+
+backup lgique(donnees)
+
+restauration de donnees dans oracle
+---------------------------
+starting restore at 16-mar-17
+
+cours le 23 mars 2017
+ create user tony identified by pass;
+  grant create session,create any table to tony;  (grant est un ensemble de privileges groupés ensemble)
+  grant connect,resource to tony;
+  //create session permet a l'utilisateur de s'authentifier(connecter a la base de donnees)
+
+  create user elcie identified by pass;
+  grant create session,create any table to elcie;	
+  grant connect,resource to elcie;
+
+
+  create table employe(
+  code number(2),
+  nom varchar2(20) 
+   );
+   create table salaire (code number(2),
+   montant real);
+insert into salaire values(15,5000);
+   insert into employe values(15,'jean');
+   //oracle prend 40% de SGA, oracle met les donnees dans database buffer cache
+   //oracle sauvegarde les donnees chaque minute
+   //pour les vider sur le disque rapidement on fait commit
+   //oracle ne donne pas acces a n'importe quel user de lire les donnees d'un autre user
+   connect tony/pass
+   grant select on employe to elcie;
+
+   //creer un role en tant que dba
+   //un role est un ensemble de privilege qu'on met ensemble
+   create role polo;
+   grant polo to elcie;
+   grant select on tony.employe to polo;
+
+   //le profil gere les ressources de base pour un utilisateur
+   //le profil est cree par le sys
+   //creer profil
+   create profile coquin limit password_reuse_time 5;
+   //assigner profil a un user
+   alter user elcie profile coquin;
+
+   drump files
+   ----------------
+   oracle genere des fichiers adump, bdump, cdump, ddump, on peut effacer le contenu de ses fichiers en laissant les plus recents pour recuperer de l'espace
+
+   cependant dans le folder bdump il y a le fichier alert_sogebank.log a ne pas effacer son contenu
+   bdump signifie backgrounddump
+
+   le fichier de parametre d'une base se trouve dans ce chemin W:\oracle\product\10.2.0\db_1\database
+
+spfile est binaire,seule oracle peut le lire(system parameter file)
+un dba doit creer un pfile des le premier jour de son travail
+
+une instance est SGA (memoire) +background process
+lè baz la domaje nan menw ou dwe demare li moso pa moso(demarrage base par palier)
+le baz la monte kontwol yo ouvè
+le kontwol la ouvri baz la gen yn nom,date et location
+
+//monter la base
+alter database mount;
+
+//ouvrir la base
+alter database open;
+desc dict
+//trouver l'id de la base de donnes
+select dbid from v$database;
+//fichye ki pi enpotan le baz la ap mache rele
+spfilesogebank.ora oubyen init.ora(W:\oracle\product\10.2.0\admin\sogebank\pfile)
+//verifier le lieu de backup de la base
+show parameters recovery
+//augmenter l'espace de stockage de backup de la base
+alter system set db_recovery_file_dest_size=4g scope=both; //both(mnt et dans le futur)
+alter system set db_recovery_file_dest_size=4g scope=memory; 
+//changer l'espace de backup de la base
+ alter system set db_recovery_file_dest='W:\oracle\product\10.2.0\flash_recovery_area' scope=both;
+
+ //gen 2 types de backup(physique,logique)
+
+ rman fait le backup physique (recovery manager)
+datapump pour backup logique
+ //connecter physiquement a une base comme Rman
+ rman target sys/pass
+ //faire le backup
+ backup database;
+ //le baz de done a an mod achiv menm si baz la louvri ou k fe bakup li
+ //si li pa an mod achiv fok u femen li avanw fe bakup
+
+le baz la an mod archive bakup la fet otomatikman
+
+extension redo log yo c .arc
+pou verifye si baz la an mod achiv, : archive log list
+tout sa ki gen yn dola devan li se yn vue, vue a c yn tab virtuel(en oracle v$database)
+anndan v$database la gen db_id, log_mode etc..
+select log_mode from v$database;
+
+//////pou konverti baz ki t an mod achiv an san achiv
+ alter database noarchivelog;
+ //////pou konverti baz ki t an mod san achiv an mod achiv
+ alter database archivelog;
+ /// le baz la ap baw ere lew t femenl eseye jwe nan shutdown yo (shutdown, shutdown immediate,etc..)
+
+ //depi oracle pa ka jere dump yo lap kanpe
+ //pa janm retire alert ki anndan bdump lan
+ //pa rete retire anyen nan dpdump
+ //si baz la pa jwenn ni init ni spfile lap kanpe net
+
+ //men koman yo kreye init lan si li pa ekziste
+ create init from spfile
+
+ //koman pou fe bakup a yn leu presi ex: chak 10:00 am
+ ou dwe ouvri yn fichye teks avek notepad, anndanl pae run{
+ set oracle_sid=sogebank
+ rman target sys/pass 
+ backup database;
+ }
+//commande ki fe aksyon sou windows pou kol
+at 
+ar /? pou aide
+
+en oracle yon baz de done k gen plizye tablespace, yn tblspace k gen plizye datafile(.bbf)
+yn odinate k gen plizye BD 
+lem nan mycomputer mpap we tablespace la paske li lojik men map we datafile la paskel fizik
+pou mezire data yo utilize unite byte
+pou itilize data en oracle yo itilize block
+yon blo k gen 2kb,4kb etc...
+oracle dibyete two piti pou li
+yn blok konn andomaje
+lew vle jwenn yn done nan yn baz u k itilize sqlplus, c#,java,toad, etc...
+chak yn itilizate pase yn oand c tn process user, chak baz la reponn li c process server
+pou baz la reponn a process user la fok 1-listerner a ap mache(mchine nan chaje enstans lan ki se(SGA+background process)) [si enstans lan an panne lap diw unhidle..... patati patata(wap fe startup force)
+
+le done yo repati sou plizye dikedi, yo rele sa RAC(real application cluster)
+anndan oracle gen moteur sql
+
+create tablespace tsfin datafile 'c:\pratique\donnee.dbf' size 5m;
+
+	//lew jwenn ereur sa:
+	ORA-01157: impossible d'identifier ou de verrouiller le fichier de donnÚes 6 -
+voir le fichier de trace DBWR
+ORA-01110: fichier de donnÚes 6 : 'C:\PRATIQUE\DONNEE.DBF'
+
+
+SQL> alter database create datafile 'C:\PRATIQUE\DONNEE.DBF';
+
+SQL> startup force
+Instance ORACLE lancÚe.
+
+Total System Global Area  612368384 bytes
+Fixed Size                  1292036 bytes
+Variable Size             327158012 bytes
+Database Buffers          276824064 bytes
+Redo Buffers                7094272 bytes
+Base de donnÚes montÚe.
+ORA-01113: le fichier 6 nÚcessite une rÚcupÚration aprÞs dÚfaillance matÚrielle
+ORA-01110: fichier de donnÚes 6 : 'C:\PRATIQUE\DONNEE.DBF'
+
+SQL> recover database;
+RÚcupÚration aprÞs dÚfaillance matÚrielle terminÚe.
+///anndan yon baz redo log yo konn gate, le yo gate fok ou kreye yo,si current lan gate pa gen pwob, li ap
+ale nan pwochen an men sa ki gate a ap still gate
+lew ap kreye redo log fok ou kreye gwoup epi ajoute member
+DEVOIR POUR JEUDI
+CRRER REDO log
+1) CRRER groupe
+2)ajouter member
+
+PROCHAIN COURS
+
+
+databaselink
+set oracle_sid=sgcpro
+sqlplus sys/pass as sysdba
+create user opens identified by pass;
+grant connect,resource,dba to opens;
+disconnect 
+conn opens/pass
+create table client(
+nocompteur number(3),
+nom varchar2(30),
+adresse varchar2(30));
+
+insert into client values(10,'Digicel','Turgeau');
+	insert into client values(11,'Natcom','Bois verna');
+		insert into client values(12,'Total','Delmas');
+			insert into client values(13,'PNH','Pacot');
+					insert into client values(14,'Shell','Bizoton');
+
+sur l'autre base SGIPRO
+
+il faut s'assurer que le tnsnames.ora contient la reference 
+
+en windows taper cd w
+dir
+cd oracle\product\10.2.0\db_1\network\admin
+start notepad tnsnames.ora
+
+//pour creer le lien 
+create public database link sgcpro
+connect to
+opens
+identified by 
+pass
+using 'sgcpro';
+select * from opens.client@sgcpro;
+Database Link
+-------------
+
+Imaginons 2 instances dont les schemas applicatifs sont salaire pour une BD payroll et un autre schema medecin d'une BD ORCL
+Un database link est un pointeur qui fait reference aux objets d'une autre instance, qu'elle soit locale ou distante.
+Pour le faire:
+a- il faut connaitre le mot de passe du schema sur lequel on veut se connecter
+b- Il faut s'assurer que le tnsnames.ora de la base source contienne une entree de la base cible.
+c- de la machine source:
+create public database link 
+  lirepayroll
+connect to 
+  salaire
+identified by 
+  pass 
+using 'payroll';
+
+Pour lire un objet d'une instance apres un database link, utiliser le mot cle @linkname suivi de l'objet.
+
+ex:  
+desc salaire.employe@lirepayroll
+
+Synonyme
+--------
+
+create public SYNONYM employe FOR salaire.employe@lirepayroll;
+
+select * from salaire.employe@lirepayroll
+
+select * from employe;
+
+///////////creer user/////////////////
+create user opens identified by pass;
+grant connect, resource, dba to opens;
+
+/////////////creer table///////////////
+create table client(nocompteur number(3),nom varchar2(30),adresse varchar2(30));
+//////////////insertion//////////////
+insert into client values(10,'Digicel','Turgeau');
+insert into client values(11,'Natcom','Bois Verna');
+insert into client values(12,'Total','Delmas');
+insert into client values(13,'PNH','Pacot');
+insert into client values(14,'shell','Bizoton');
+
+///sur l'autre base SGIPRO///
+il faut s'assurer que le tnsnames.ora contient la reference
+
+oracle_
+///creer le link///
+
+ create public database link sgcpro
+ connect to
+ opens
+ identified by
+ pass
+ using 'sgcpro';
+
+ 2EME SESSON FINALE
+ Programmation EN ORACLE
+ \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+ il existe 4 types de procedure stockee pl/sql 
+ 	*procedure
+ 	*fonction
+ 	*trigger
+ 	*package
+
+ Oracle Pl/sql- procedure stockee
+ /////////////////////////////////////////
+ la procedure stockee se fait d'une facon speciale en Oracle
+ -En principe tous les editeurs de base de donnees ont leur propre langage de Programmation
+
+ Oracle=PL/SQL
+ Sql Server Ms=transact sql(t-sql)
+ mysql=t-sql
+
+ il existe des blocs pl/sqlplus
+ -Blocs dit"sans nom"
+ -blocs dit"nommés"
+
+ Forme de Pl/sql s'exprime ainsi :sans declaration de Variable
+ BEGIN
+ NUll;
+ End;
+ /
+
+ Forme de Pl/sql s'exprime ainsi :avec declaration de Variable
+ DECLARE x INTEGER 
+ BEGIN 
+ x :=1;
+ End;
+ /
+
+ procedure stockee avec nom
+ create or replace procedure exo1
+ 	is
+ 	begin
+ 	null;
+ 	end;
+ 	/
+
+ 	l'utilisateur, c'est lui qui doit creer les procedures
+ 	desc user_source
+ 	select * from user_source
+ 	create table clients (
+ 			no_cli number(2),
+ 			nom_cli varchar2(20),
+ 			ville_cli varchar2(30)
+ 		);
+
+ 	 create or replace procedure ajoucli(
+		v_nomcli varchar2
+
+ 	 	)
+ 	is
+ 	begin
+ 	null;
+ 	end;
+ 	/
+ cependant avant d'utiliser PL/SQL sur une base oracle, il faut l'activer en executant l script "catproc.sql"
+
+pour l'executer dans sqlplus on fait ceci:
+start W:\oracle\product\102.0\db_1\RDBMS\ADMIN\catproc.sql 
+
+grant connect,resource,dba to patricia identified by pass;
+	create TableSpace tscaisse datafile 'c:\recu\data01.dbf' size 2M;
+		alter user patricia default TableSpace tscaisse;
+		conn patricia/pass
+		create table client (code varchar2(5) primary key,
+			nom varchar2(30),
+			prenom varchar2(30),
+			balance float);
+
+
+//creation de la procedure
+
+	 create or replace procedure ajoucli(
+		v_code varchar2,
+		v_nom varchar2,
+		v_prenom varchar2,
+		v_balance float
+ 	 	)
+ 	 	is
+ 	 	BEGIN
+ 	 	insert into client(code,nom,prenom,balance) values(v_code,v_nom,v_prenom,v_balance) ;
+ 	 	end;
+ 	 	/
+
+ 	 	create or replace procedure ajoutcitoyen(
+		v_noidentite NUMBER(10) NOT NULL ,
+		v_nom varchar2,
+		v_prenom varchar2,
+		v_adresse float
+ 	 	)
+ 	 	is
+ 	 	BEGIN
+ 	 	insert into citoyen(noidentite,nom,prenom,adresse) values(v_noidentite,v_nom,v_prenom,v_adresse) ;
+ 	 	end;
+ 	 	/
+
+ 	 	//pour executer la procedure
+
+ 	 	exec ajoutcitoyen(compter.nextval,'bernard','edd','carrefour');
+ 	 	exec ajoucli('E181','Andre','jacques',2000);
+ 	 	commit;
+//creation de la fonction
+create or replace function solde(
+v_code varchar2
+)
+return float 
+is lesolde float;
+BEGIN
+select balance into lesolde from client where code=v_code;
+return lesolde;
+end;
+/
+//requete pour executer la fonction
+select solde('A015') from dual;
